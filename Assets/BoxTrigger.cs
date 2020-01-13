@@ -19,6 +19,7 @@ public class BoxTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("trigger event " + other.name);
+	Debug.Log("Get Triggered.");
     }
 
     private void OnCollisionEnter(Collision collision)
