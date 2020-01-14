@@ -8,12 +8,17 @@ public class NPCAI : MonoBehaviour
     NavMeshAgent agent;
     public Transform player;
     public float cooldown = -1;
+    public bool followPlayer = false;
+
+    public Transform[] patrolPoints = new Transform[10];
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(player.position);
+
+
     }
 
     // Update is called once per frame

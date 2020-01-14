@@ -23,8 +23,9 @@ public class AimBehaviourBasic : GenericBehaviour
 	// Update is used to set features regardless the active behaviour.
 	void Update ()
 	{
-		// Activate/deactivate aim by input.
-		if (Input.GetAxisRaw(aimButton) != 0 && !aim)
+        // Activate/deactivate aim by input.
+        //<JPK> disable for now
+        if ( false && Input.GetAxisRaw(aimButton) != 0 && !aim)
 		{
 			StartCoroutine(ToggleAimOn());
 		}

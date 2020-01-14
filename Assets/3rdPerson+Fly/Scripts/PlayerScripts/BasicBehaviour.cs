@@ -70,8 +70,9 @@ public class BasicBehaviour : MonoBehaviour
 		anim.SetFloat(hFloat, h, 0.1f, Time.deltaTime);
 		anim.SetFloat(vFloat, v, 0.1f, Time.deltaTime);
 
-		// Toggle sprint by input.
-		sprint = Input.GetButton (sprintButton);
+        // Toggle sprint by input.
+        //<JPK> disable for now
+        //sprint = Input.GetButton (sprintButton);
 
 		// Set the correct camera FOV for sprint mode.
 		if(IsSprinting())
