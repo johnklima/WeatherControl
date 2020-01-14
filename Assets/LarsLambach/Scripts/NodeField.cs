@@ -21,7 +21,7 @@ public class NodeField : MonoBehaviour
     {
         if (cropType != null)
         {
-            Debug.Log("Can't build here - TODO: Display on screen!");
+            Debug.Log("Can't plant here");
             return;
         }
 
