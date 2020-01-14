@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPC3 : MonoBehaviour
+public class Priest : MonoBehaviour
 {
     NavMeshAgent agent;
     public Transform player;

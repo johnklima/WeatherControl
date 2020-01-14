@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeePlayer : MonoBehaviour
 {
 
-    public NPC3 npcAIscript = null;
+    public Priest npcAIscript = null;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +53,7 @@ public class SeePlayer : MonoBehaviour
 
             if (!didhit)
             { //follow player
-                npcAIscript = transform.parent.GetComponent<NPC3>();
+                npcAIscript = transform.parent.GetComponent<Priest>();
                 npcAIscript.followPlayer = true;
             }
 
