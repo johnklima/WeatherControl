@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPCAI : MonoBehaviour
+public class NPC3 : MonoBehaviour
 {
     NavMeshAgent agent;
     public Transform player;
     public float cooldown = -1;
     public bool followPlayer = false;
 
-    public Transform[] patrolPoints = new Transform[10];
-    public int curIndex = 0;
+    public Transform[] patrolPoints = new Transform[24];
+    private int curIndex;
 
     // Start is called before the first frame update
     void Start()
     {
+        int curIndex = Random.Range(0, 23);
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(patrolPoints[curIndex].position);
 
@@ -27,12 +28,7 @@ public class NPCAI : MonoBehaviour
     {
         if (agent.remainingDistance < 10.0f && !followPlayer)
         {
-            curIndex++;
-            if (curIndex >= patrolPoints.Length)
-            {
-                curIndex = 0;
-            }
-
+            int curIndex = Random.Range(0, 23);
             agent.SetDestination(patrolPoints[curIndex].position);
         }
 
