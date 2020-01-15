@@ -1,1 +1,1 @@
-{"price":3.0,"quantity":0,"QuantityText":{"instanceID":-45310},"currencyGui":{"instanceID":-66852}}
+{"price":3.0,"quantity":12,"QuantityText":{"instanceID":-45310},"currencyGui":{"instanceID":-66852}}

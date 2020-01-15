@@ -31,6 +31,10 @@ public class Seeds : MonoBehaviour
         currencyGui.currency -= price;
         currencyGui.GetComponentInChildren<Text>().text = "" + currencyGui.currency;
 
+        writeSeed();
+        currencyGui.writeCurrency();
+
+
     }
     virtual public void writeSeed()
     { 

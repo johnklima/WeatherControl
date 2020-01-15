@@ -18,7 +18,7 @@ public class LeekSeeds : Seeds
             //do nothing, or maybe write the file for the first time
             writeSeed();
         }
-
+        QuantityText.text = "" + quantity;
     }
 
     // Update is called once per frame

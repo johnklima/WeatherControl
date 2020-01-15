@@ -13,6 +13,18 @@ public class CurrencyButton : MonoBehaviour
 
     void Start()
     {
+
+        try
+        {
+            readCurrency();
+        }
+        catch
+        {
+            //do nothing, or maybe write the file for the first time
+            writeCurrency();
+        }
+
+
         GetComponentInChildren<Text>().text = "" + currency;
     }
 
@@ -20,5 +32,16 @@ public class CurrencyButton : MonoBehaviour
     void Update()
     {
         
+    }
+    public void writeCurrency()
+    {
+        string json = JsonUtility.ToJson(this);
+        System.IO.File.WriteAllText("Currency.txt", json);
+    }
+    public void readCurrency() 
+    {
+        string json = System.IO.File.ReadAllText("Currency.txt");
+        JsonUtility.FromJsonOverwrite(json, this);
+
     }
 }
