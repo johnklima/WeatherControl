@@ -10,7 +10,7 @@ public class SeedStore : MonoBehaviour
 
     private int seedAmount;
 
-    private int indexer = 0;
+    private int indexer = 1;
     private int indexersize;
 
     private bool playerHere;

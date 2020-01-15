@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CurrencyUI.text = "Currency = " + Currency.ToString();
+
         DayCycle = theSun.GetComponent<DayNightCycle>().DayTime + theSun.GetComponent<DayNightCycle>().NightTime;
 
         weekcycle = DayCycle * 7;
