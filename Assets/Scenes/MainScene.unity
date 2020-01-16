@@ -40790,12 +40790,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880034929}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1882177729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8083977959832195894, guid: fbba8f8ca899f0040ac4b48d5f784004,
-    type: 3}
-  m_PrefabInstance: {fileID: 2106146094}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1884773460
 GameObject:
   m_ObjectHideFlags: 0
@@ -44371,8 +44365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8d14d265c4f61439a9154ee11594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theGM: {fileID: 1882177729}
-  SeedType: {fileID: 1435111478}
+  SeedStoreGui: {fileID: 0}
 --- !u!65 &2032074760
 BoxCollider:
   m_ObjectHideFlags: 0

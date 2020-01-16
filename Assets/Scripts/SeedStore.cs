@@ -8,10 +8,13 @@ public class SeedStore : MonoBehaviour
     public GameObject SeedStoreGui;
     private bool inStore;
 
+    public GameObject thePlayer;
+    public GameObject theCamera;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        SeedStoreGui.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,25 +25,41 @@ public class SeedStore : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        
         PlayerHere();
     }
 
     private void PlayerHere()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            inStore = true;
-            SeedStoreGui.SetActive(true);
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.B) && inStore == true)
         {
             inStore = false;
             SeedStoreGui.SetActive(false);
+            thePlayer.GetComponent<PlayerController>().enabled = true;
+            theCamera.GetComponent<ThirdPersonCamera>().enabled = true;
+            return;
         }
+
+        if (Input.GetKeyDown(KeyCode.B) && inStore == false)
+        {
+            inStore = true;
+            SeedStoreGui.SetActive(true);
+            thePlayer.GetComponent<PlayerController>().enabled = false;
+            theCamera.GetComponent<ThirdPersonCamera>().enabled = false;
+            return;
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        SeedStoreGui.SetActive(false);
+        if (inStore == true)
+        {
+            inStore = false;
+            SeedStoreGui.SetActive(false);
+            thePlayer.GetComponent<PlayerController>().enabled = true;
+            theCamera.GetComponent<ThirdPersonCamera>().enabled = true;
+        }
+
     }
 }
