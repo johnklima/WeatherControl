@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnionSeeds : Seeds
+public class LeekSeeds : Seeds
 {
     // Start is called before the first frame update
     void Start()
     {
-        price = 3.0f;
+        price = 1.95f;
 
         try
         {
@@ -26,15 +26,16 @@ public class OnionSeeds : Seeds
     {
         
     }
+
     public override void writeSeed()
     {
         string json = JsonUtility.ToJson(this);
-        System.IO.File.WriteAllText("Onions.txt", json);
+        System.IO.File.WriteAllText("Leeks.txt", json);
 
     }
     public override void readSeed()
     {
-        string json = System.IO.File.ReadAllText("Onions.txt");
+        string json = System.IO.File.ReadAllText("Leeks.txt");
         JsonUtility.FromJsonOverwrite(json, this);
 
     }

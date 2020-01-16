@@ -11,12 +11,13 @@ public class Seeds : MonoBehaviour
     public float price;
     public int quantity;
     public Text QuantityText;
+    public Text SeedPrice;
     public CurrencyButton currencyGui;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class Seeds : MonoBehaviour
     {
         quantity++;
         QuantityText.text = "" + quantity;
+        SeedPrice.text = "Cost : " + price + "£"; 
         currencyGui.currency -= price;
         currencyGui.GetComponentInChildren<Text>().text = "" + currencyGui.currency;
 
