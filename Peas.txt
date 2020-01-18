@@ -1,0 +1,1 @@
+{"price":1.399999976158142,"quantity":0,"QuantityText":{"instanceID":16826},"SeedPrice":{"instanceID":14356},"currencyGui":{"instanceID":13608}}

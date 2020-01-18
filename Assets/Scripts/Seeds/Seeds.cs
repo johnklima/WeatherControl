@@ -19,7 +19,6 @@ public class Seeds : MonoBehaviour
     {
 
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -29,7 +28,8 @@ public class Seeds : MonoBehaviour
     {
         quantity++;
         QuantityText.text = "" + quantity;
-        SeedPrice.text = "Cost : " + price + "£"; 
+        SeedPrice.text = "Cost : " + price + "£";
+        Debug.LogError("Seedprice needs to be updated after start");
         currencyGui.currency -= price;
         currencyGui.GetComponentInChildren<Text>().text = "" + currencyGui.currency;
 
