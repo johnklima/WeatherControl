@@ -12,7 +12,7 @@
 /[Pp]rojectSettings/
 # /[Pp]ackages/
 
-/SeedData/*.*
+/SeedData/*.txt
 
 # Never ignore Asset meta data
 # [Aa]ssets/**/*.meta
