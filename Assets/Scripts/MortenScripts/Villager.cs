@@ -17,7 +17,9 @@ public class Villager : MonoBehaviour
     {
         int curIndex = Random.Range(0, 23);
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(patrolPoints[curIndex].position);
+        try { agent.SetDestination(patrolPoints[curIndex].position); }
+        catch
+        { }
 
 
     }
@@ -28,7 +30,15 @@ public class Villager : MonoBehaviour
         if (agent.remainingDistance < 10.0f && !spottedPlayer)
         {
             int curIndex = Random.Range(0, 23);
-            agent.SetDestination(patrolPoints[curIndex].position);
+            try
+            { 
+                agent.SetDestination(patrolPoints[curIndex].position); 
+            }
+            catch
+            {
+                Debug.Log("No Patrol points on Villager");
+            }
+            
         }
 
         if (spottedPlayer)

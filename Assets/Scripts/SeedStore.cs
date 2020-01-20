@@ -12,6 +12,12 @@ public class SeedStore : MonoBehaviour
     public GameObject theCamera;
 
     // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+        SeedStoreGui.SetActive(true);
+    }
     void Start()
     {
         SeedStoreGui.SetActive(false);
@@ -34,7 +40,7 @@ public class SeedStore : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B) && inStore == true)
         {
             inStore = false;
-            SeedStoreGui.SetActive(false);
+            SeedStoreGui.SetActive(false);            
             thePlayer.GetComponent<PlayerController>().enabled = true;
             theCamera.GetComponent<ThirdPersonCamera>().enabled = true;
             return;

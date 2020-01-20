@@ -5,7 +5,7 @@ using UnityEngine;
 public class StrawberriesSeeds : Seeds
 {
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         price = 0.5f;
 
@@ -19,6 +19,7 @@ public class StrawberriesSeeds : Seeds
             writeSeed();
         }
         QuantityText.text = "" + quantity;
+        SeedPrice.text = "Cost : " + this.price + "£";
     }
 
     // Update is called once per frame

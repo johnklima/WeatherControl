@@ -18,8 +18,9 @@ public class Priest : MonoBehaviour
     {
         int curIndex = Random.Range(0, 23);
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(patrolPoints[curIndex].position);
-
+        try { agent.SetDestination(patrolPoints[curIndex].position); }       
+        catch
+        { }
 
     }
 
@@ -29,7 +30,17 @@ public class Priest : MonoBehaviour
         if (agent.remainingDistance < 10.0f && !spottedPlayer)
         {
             int curIndex = Random.Range(0, 23);
-            agent.SetDestination(patrolPoints[curIndex].position);
+
+            try
+            {
+                agent.SetDestination(patrolPoints[curIndex].position);
+            }
+            catch
+            {
+                Debug.Log("No Patrol points on Priest.");
+            }
+
+           
         }
 
         if (spottedPlayer == true)
