@@ -6,13 +6,25 @@ public class NodeField : MonoBehaviour
     private Color startColor;
 
     public Vector3 positionOffset;
-
+    private float RayLength;
+    
     private GameObject cropType;
 
     private Renderer rendComp;
-    
+
+    private bool inRange;
+
+    //Plot State
+    private bool emptyPlot;
+
     void Start()
     {
+        RayLength = BuildManager.instance.InterLength();
+
+        Debug.Log(RayLength);
+        emptyPlot = true;
+        inRange = false;
+
         rendComp = GetComponent<Renderer>();
         startColor = rendComp.material.color;
     }
@@ -24,9 +36,15 @@ public class NodeField : MonoBehaviour
             Debug.Log("Can't plant here");
             return;
         }
-
-        GameObject cropToBuild = BuildManager.instance.GetCropToBuild();
-        cropType = (GameObject)Instantiate(cropToBuild, transform.position + positionOffset, transform.rotation);
+        if (emptyPlot == true && inRange == true)
+        {
+            GameObject cropToBuild = BuildManager.instance.GetCropToBuild();
+            cropType = Instantiate(cropToBuild, transform.position + positionOffset, transform.rotation);
+            emptyPlot = false;
+            rendComp.enabled = false;
+        }
+        
+        
     }
 
    void OnMouseEnter()
@@ -35,9 +53,14 @@ public class NodeField : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         int layerMask = 1 << 8;
-        if (Physics.Raycast(ray, out hit, 50.0f, layerMask))
+        if (Physics.Raycast(ray, out hit, RayLength, layerMask) && emptyPlot == true)
         {
             rendComp.material.color = hoverColor;
+            inRange = true;
+        }
+        else
+        {
+            inRange = false;
         }
         
     }
@@ -45,5 +68,6 @@ public class NodeField : MonoBehaviour
     void OnMouseExit()
     {
         rendComp.material.color = startColor;
+        inRange = false;
     }
 }

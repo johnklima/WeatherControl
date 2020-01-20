@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
+    public float interactionLenght;
 
     void Awake()
     {
@@ -23,6 +24,11 @@ public class BuildManager : MonoBehaviour
     public GameObject GetCropToBuild()
     {
         return cropToBuild;
+    }
+
+    public float InterLength()
+    {
+        return interactionLenght;
     }
     
 }
