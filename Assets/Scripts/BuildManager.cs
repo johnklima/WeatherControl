@@ -7,6 +7,10 @@ public class BuildManager : MonoBehaviour
     public static BuildManager instance;
     public float interactionLenght;
 
+    public int curCrop = 0;
+
+    public Seeds[] seeds = new Seeds[10];
+
     void Awake()
     {
         instance = this;
