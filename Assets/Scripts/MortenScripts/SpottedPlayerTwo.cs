@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeePlayerMI : MonoBehaviour
+public class SpottedPlayerTwo : MonoBehaviour
 {
 
-    public Priest npcAIscript = null;
+    public Villager npcAIscript = null;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class SeePlayerMI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,8 +53,8 @@ public class SeePlayerMI : MonoBehaviour
 
             if (!didhit)
             { //follow player
-                npcAIscript = transform.parent.GetComponent<Priest>();
-                npcAIscript.followPlayer = true;
+                npcAIscript = transform.parent.GetComponent<Villager>();
+                npcAIscript.spottedPlayer = true;
             }
 
 

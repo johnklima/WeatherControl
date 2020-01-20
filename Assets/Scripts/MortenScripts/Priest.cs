@@ -8,7 +8,7 @@ public class Priest : MonoBehaviour
     NavMeshAgent agent;
     public Transform player;
     public float cooldown = -1;
-    public bool followPlayer = false;
+    public bool spottedPlayer = false;
 
     public Transform[] patrolPoints = new Transform[24];
     private int curIndex;
@@ -26,13 +26,13 @@ public class Priest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent.remainingDistance < 10.0f && !followPlayer)
+        if (agent.remainingDistance < 10.0f && !spottedPlayer)
         {
             int curIndex = Random.Range(0, 23);
             agent.SetDestination(patrolPoints[curIndex].position);
         }
 
-        if (followPlayer)
+        if (spottedPlayer == true)
         {
             if (agent.remainingDistance > 3.0f)
             {
