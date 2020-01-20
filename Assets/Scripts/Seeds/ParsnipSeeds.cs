@@ -7,6 +7,7 @@ public class ParsnipSeeds : Seeds
     // Start is called before the first frame update
     void Awake()
     {
+        getReferences();
         price = 1.65f;
 
         try
@@ -30,6 +31,9 @@ public class ParsnipSeeds : Seeds
     public override void writeSeed()
     {
         string json = JsonUtility.ToJson(this);
+        
+        
+
         System.IO.File.WriteAllText("SeedData/Parsnip.txt", json);
 
     }

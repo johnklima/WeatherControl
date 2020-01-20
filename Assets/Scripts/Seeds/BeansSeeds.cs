@@ -7,6 +7,7 @@ public class BeansSeeds : Seeds
     // Start is called before the first frame update
     void Awake()
     {
+        getReferences();
         price = 2.45f;
 
         try
