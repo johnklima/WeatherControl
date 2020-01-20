@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class IndividualItem : MonoBehaviour
 {
-    public int SelectionKey;
+    public int SelectionKey = 22;
     private KeyCode theKey;
     private bool isBold;
 
