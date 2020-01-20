@@ -38,6 +38,15 @@ public class Seeds : MonoBehaviour
 
 
     }
+    public void plantSeed()
+    {
+        quantity -= 1;
+        writeSeed();
+        readSeed();
+        QuantityText.text = "" + quantity;
+
+    }
+
     virtual public void writeSeed()
     { 
     
