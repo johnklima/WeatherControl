@@ -29,12 +29,12 @@ public class BeansSeeds : Seeds
     public override void writeSeed()
     {
         string json = JsonUtility.ToJson(this);
-        System.IO.File.WriteAllText("Beans.txt", json);
+        System.IO.File.WriteAllText("SeedData/Beans.txt", json);
 
     }
     public override void readSeed()
     {
-        string json = System.IO.File.ReadAllText("Beans.txt");
+        string json = System.IO.File.ReadAllText("SeedData/Beans.txt");
         JsonUtility.FromJsonOverwrite(json, this);
 
     }
