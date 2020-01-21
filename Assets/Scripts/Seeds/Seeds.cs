@@ -8,13 +8,23 @@ using UnityEngine.UI;
 public class Seeds : MonoBehaviour
 {
 
+    protected Text QuantityText;
+    protected Text SeedPrice;
+    protected CurrencyButton currencyGui;
+
     public float price;
     public int quantity;
-    public Text QuantityText;
-    public Text SeedPrice;
-    public CurrencyButton currencyGui;
 
     // Start is called before the first frame update
+    public void getReferences()
+    {
+        //grab the references permanently include in SeedReferences and stuff them here
+        //so we can serialize this class without bad object references
+        QuantityText = GetComponent<SeedReferences>().QuantityText;
+        SeedPrice = GetComponent<SeedReferences>().SeedPrice;
+        currencyGui = GetComponent<SeedReferences>().currencyGui;
+
+    }
     void Start()
     {
        

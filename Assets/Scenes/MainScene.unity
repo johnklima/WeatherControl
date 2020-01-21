@@ -2990,6 +2990,7 @@ GameObject:
   - component: {fileID: 431715845}
   - component: {fileID: 431715844}
   - component: {fileID: 431715843}
+  - component: {fileID: 431715847}
   m_Layer: 5
   m_Name: TomatoButton
   m_TagString: Untagged
@@ -3032,9 +3033,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 501824090}
-  SeedPrice: {fileID: 725549635}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &431715844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3125,6 +3123,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431715841}
   m_CullTransparentMesh: 0
+--- !u!114 &431715847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431715841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 501824090}
+  SeedPrice: {fileID: 725549635}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &435620397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3358,6 +3371,7 @@ GameObject:
   - component: {fileID: 484695092}
   - component: {fileID: 484695091}
   - component: {fileID: 484695090}
+  - component: {fileID: 484695094}
   m_Layer: 5
   m_Name: StrawberriesButton
   m_TagString: Untagged
@@ -3400,9 +3414,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 707953229}
-  SeedPrice: {fileID: 906606383}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &484695091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,6 +3504,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484695088}
   m_CullTransparentMesh: 0
+--- !u!114 &484695094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484695088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 707953229}
+  SeedPrice: {fileID: 906606383}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &488206988
 GameObject:
   m_ObjectHideFlags: 0
@@ -3820,6 +3846,7 @@ GameObject:
   - component: {fileID: 544313834}
   - component: {fileID: 544313833}
   - component: {fileID: 544313832}
+  - component: {fileID: 544313836}
   m_Layer: 5
   m_Name: ParsnipButton
   m_TagString: Untagged
@@ -3862,9 +3889,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 1157649279}
-  SeedPrice: {fileID: 758138547}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &544313833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3955,6 +3979,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544313830}
   m_CullTransparentMesh: 0
+--- !u!114 &544313836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544313830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 1157649279}
+  SeedPrice: {fileID: 758138547}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &553310349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,6 +4489,7 @@ GameObject:
   - component: {fileID: 599395626}
   - component: {fileID: 599395625}
   - component: {fileID: 599395624}
+  - component: {fileID: 599395628}
   m_Layer: 5
   m_Name: SweetcomButton
   m_TagString: Untagged
@@ -4492,9 +4532,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 197648272}
-  SeedPrice: {fileID: 385319564}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &599395625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4585,6 +4622,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599395622}
   m_CullTransparentMesh: 0
+--- !u!114 &599395628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599395622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 197648272}
+  SeedPrice: {fileID: 385319564}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &627847829
 GameObject:
   m_ObjectHideFlags: 0
@@ -7322,6 +7374,7 @@ GameObject:
   - component: {fileID: 1190752349}
   - component: {fileID: 1190752348}
   - component: {fileID: 1190752347}
+  - component: {fileID: 1190752351}
   m_Layer: 5
   m_Name: LettuceButton
   m_TagString: Untagged
@@ -7364,9 +7417,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 1759494275}
-  SeedPrice: {fileID: 738502736}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &1190752348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7457,6 +7507,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190752345}
   m_CullTransparentMesh: 0
+--- !u!114 &1190752351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190752345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 1759494275}
+  SeedPrice: {fileID: 738502736}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &1204595082
 GameObject:
   m_ObjectHideFlags: 0
@@ -7875,6 +7940,7 @@ GameObject:
   - component: {fileID: 1256819129}
   - component: {fileID: 1256819128}
   - component: {fileID: 1256819127}
+  - component: {fileID: 1256819131}
   m_Layer: 5
   m_Name: PeasButton
   m_TagString: Untagged
@@ -7917,9 +7983,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 1416981338}
-  SeedPrice: {fileID: 331215663}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &1256819128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8010,6 +8073,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256819125}
   m_CullTransparentMesh: 0
+--- !u!114 &1256819131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256819125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 1416981338}
+  SeedPrice: {fileID: 331215663}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &1293366558
 GameObject:
   m_ObjectHideFlags: 0
@@ -9047,6 +9125,7 @@ GameObject:
   - component: {fileID: 1518938697}
   - component: {fileID: 1518938696}
   - component: {fileID: 1518938699}
+  - component: {fileID: 1518938700}
   m_Layer: 5
   m_Name: OnionButton
   m_TagString: Untagged
@@ -9179,6 +9258,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
+--- !u!114 &1518938700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518938694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   QuantityText: {fileID: 409880118}
   SeedPrice: {fileID: 1173029043}
   currencyGui: {fileID: 17728629}
@@ -9257,6 +9348,7 @@ GameObject:
   - component: {fileID: 1546904409}
   - component: {fileID: 1546904408}
   - component: {fileID: 1546904407}
+  - component: {fileID: 1546904411}
   m_Layer: 5
   m_Name: LeekButton
   m_TagString: Untagged
@@ -9299,9 +9391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 2139852955}
-  SeedPrice: {fileID: 1204595084}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &1546904408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9392,6 +9481,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546904405}
   m_CullTransparentMesh: 0
+--- !u!114 &1546904411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546904405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 2139852955}
+  SeedPrice: {fileID: 1204595084}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &1556635295
 GameObject:
   m_ObjectHideFlags: 0
@@ -11420,6 +11524,7 @@ GameObject:
   - component: {fileID: 1949167594}
   - component: {fileID: 1949167593}
   - component: {fileID: 1949167592}
+  - component: {fileID: 1949167596}
   m_Layer: 5
   m_Name: BeansButton
   m_TagString: Untagged
@@ -11462,9 +11567,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 162977574}
-  SeedPrice: {fileID: 1060151046}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &1949167593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11555,6 +11657,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949167590}
   m_CullTransparentMesh: 0
+--- !u!114 &1949167596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949167590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 162977574}
+  SeedPrice: {fileID: 1060151046}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &1955405869
 GameObject:
   m_ObjectHideFlags: 0
@@ -11978,6 +12095,7 @@ GameObject:
   - component: {fileID: 2070141919}
   - component: {fileID: 2070141918}
   - component: {fileID: 2070141917}
+  - component: {fileID: 2070141921}
   m_Layer: 5
   m_Name: CarrotsButton
   m_TagString: Untagged
@@ -12020,9 +12138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 0
   quantity: 0
-  QuantityText: {fileID: 275827311}
-  SeedPrice: {fileID: 1230489409}
-  currencyGui: {fileID: 17728629}
 --- !u!114 &2070141918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12113,6 +12228,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070141915}
   m_CullTransparentMesh: 0
+--- !u!114 &2070141921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070141915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0572dbf3c30fa468c2a5815c94045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuantityText: {fileID: 275827311}
+  SeedPrice: {fileID: 1230489409}
+  currencyGui: {fileID: 17728629}
 --- !u!1 &2071933343
 GameObject:
   m_ObjectHideFlags: 0
