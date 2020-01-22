@@ -19,6 +19,8 @@ public class DayNightCycle : MonoBehaviour
     private Color nighttimeColor = Color.blue;
 
 
+    //by John Hauge
+
     // Start is called before the first frame update
     void Start()
     {

@@ -9,12 +9,13 @@ public class NodeField : MonoBehaviour
     private float RayLength;
     
     private GameObject cropType;
+    public GameObject SelectedSeed;
 
     private Renderer rendComp;
 
     private bool inRange;
 
-    public int currentCrop = 1;
+    public int currentCrop = 0;
 
     //Plot State
     private bool emptyPlot;
@@ -47,8 +48,6 @@ public class NodeField : MonoBehaviour
             
             emptyPlot = false;
             rendComp.enabled = false;
-
-
         }
 
 
@@ -58,6 +57,7 @@ public class NodeField : MonoBehaviour
     {
 
         //MAp input keys to crop array (zero based)
+        /*
         if (Input.GetKeyDown(KeyCode.Alpha1))
             currentCrop = 0;
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -78,6 +78,9 @@ public class NodeField : MonoBehaviour
             currentCrop = 8;
         if (Input.GetKeyDown(KeyCode.Alpha0))
             currentCrop = 9;
+            */
+
+        
     }
 
 
@@ -90,6 +93,18 @@ public class NodeField : MonoBehaviour
         }
         if (emptyPlot == true && inRange == true)
         {
+            currentCrop = SelectedSeed.GetComponent<ItemSelected>().selectedItem;
+
+            if (currentCrop == 0)
+            {
+                currentCrop = 9;
+            }
+            else
+            {
+                currentCrop -= 1;
+            }
+
+
             GameObject cropToBuild = BuildManager.instance.GetCropToBuild();
             cropType = Instantiate(cropToBuild, transform.position + positionOffset, transform.rotation);
             
