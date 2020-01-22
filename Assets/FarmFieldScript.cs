@@ -7,10 +7,12 @@ public class FarmFieldScript : MonoBehaviour
     // Start is called before the first frame update
 
     public int currentCrop = 1;
+    public string plantedSeed;
 
-    void Start()
+    void awake()
     {
-        
+        plantedSeed = BuildManager.instance.seeds[currentCrop].name.ToString();
+        Debug.Log(plantedSeed + "has been planted");
     }
 
     // Update is called once per frame

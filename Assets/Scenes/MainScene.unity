@@ -259,9 +259,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &8571488
@@ -514,10 +516,9 @@ GameObject:
   - component: {fileID: 19859537}
   - component: {fileID: 19859536}
   - component: {fileID: 19859540}
-  - component: {fileID: 19859541}
   m_Layer: 8
   m_Name: FarmSize
-  m_TagString: Untagged
+  m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -609,26 +610,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
---- !u!114 &19859541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19859535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a83647daca0631043a781cd78f72dda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlanted: 0
-  currentCrop: -1
-  index: 0
 --- !u!1 &24498638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,9 +1018,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &64318860
@@ -1467,9 +1457,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &154142883
@@ -2348,9 +2340,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &257175749
@@ -3293,9 +3287,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &386155929
@@ -3923,9 +3919,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &435620403
@@ -4572,9 +4570,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &542024925
@@ -5169,9 +5169,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &574904094
@@ -5372,9 +5374,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &598586583
@@ -6789,9 +6793,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &736912941
@@ -7024,6 +7030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedItem: 0
+  SeedQuantity: []
 --- !u!1 &818739186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7477,9 +7484,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &909928250
@@ -7697,9 +7706,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &925860417
@@ -9643,9 +9654,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1181317697
@@ -10287,9 +10300,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1242332781
@@ -10677,7 +10692,7 @@ GameObject:
   - component: {fileID: 1300124557}
   - component: {fileID: 1300124556}
   m_Layer: 0
-  m_Name: CropManager
+  m_Name: BuildManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11266,9 +11281,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1453151867
@@ -12417,9 +12434,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1696611241
@@ -12826,9 +12845,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1725409029
@@ -12985,9 +13006,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1737666823
@@ -13416,9 +13439,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1795096912
@@ -13874,9 +13899,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1870530149
@@ -14002,9 +14029,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1886918778
@@ -14478,9 +14507,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1955405875
@@ -14606,9 +14637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.5207647, g: 0.7647059, b: 0.5257431, a: 0.33333334}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0, z: 0}
   SelectedSeed: {fileID: 808751961}
   currentCrop: 1
+  plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
 --- !u!114 &1960099057

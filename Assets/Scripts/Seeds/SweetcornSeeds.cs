@@ -9,7 +9,6 @@ public class SweetcornSeeds : Seeds
     {
         getReferences();
         price = 1.95f;
-        GrowthTimer = 13.5f;
 
         try
         {
@@ -22,7 +21,6 @@ public class SweetcornSeeds : Seeds
         }
         QuantityText.text = "" + quantity;
         SeedPrice.text = "Cost : " + this.price + "£";
-        GrowthTime.text = "GrowthTime :" + GrowthTimer;
     }
 
     // Update is called once per frame
