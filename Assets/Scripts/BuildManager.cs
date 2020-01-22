@@ -11,6 +11,7 @@ public class BuildManager : MonoBehaviour
 
     public Seeds[] seeds = new Seeds[10];
 
+
     void Awake()
     {
         instance = this;

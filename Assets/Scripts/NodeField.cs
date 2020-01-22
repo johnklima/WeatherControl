@@ -3,7 +3,7 @@
 public class NodeField : MonoBehaviour
 {
     public Color hoverColor;
-    private Color startColor;
+    public Color startColor;
 
     public Vector3 positionOffset;
     private float RayLength;
@@ -15,10 +15,15 @@ public class NodeField : MonoBehaviour
 
     private bool inRange;
 
+
+    //PlotInfo
     public int currentCrop = 0;
+    private float plantedTimer;
+    public float plotPrice = 10;
 
     //Plot State
     private bool emptyPlot;
+    private bool plantedPlot;
 
     public GameObject plotPrefab;
 
@@ -26,12 +31,11 @@ public class NodeField : MonoBehaviour
     {
         RayLength = BuildManager.instance.InterLength();
 
-        Debug.Log(RayLength);
         emptyPlot = true;
+        plantedPlot = false;
         inRange = false;
 
         rendComp = GetComponent<Renderer>();
-        startColor = rendComp.material.color;
 
         SaveLoadField slv = GetComponentInParent<SaveLoadField>();
         if(slv.isPlanted)
@@ -86,48 +90,62 @@ public class NodeField : MonoBehaviour
 
     void OnMouseDown()
     {
+        /*
         if (cropType != null)
         {
             Debug.Log("Can't plant here");
             return;
         }
-        if (emptyPlot == true && inRange == true)
+        */
+
+
+        if (inRange == true)
         {
-            currentCrop = SelectedSeed.GetComponent<ItemSelected>().selectedItem;
 
-            if (currentCrop == 0)
+            if ( emptyPlot == true)
             {
-                currentCrop = 9;
-            }
-            else
-            {
-                currentCrop -= 1;
-            }
-
-
-
-
-            //Decrement seed count TODO: not less than zero!!
-            if (BuildManager.instance.seeds[currentCrop].quantity > 0)
-            {
-                GameObject cropToBuild = BuildManager.instance.GetCropToBuild();
-                cropType = Instantiate(cropToBuild, transform.position + positionOffset, transform.rotation);
-
-                cropType.GetComponent<FarmFieldScript>().currentCrop = currentCrop;
-
-                BuildManager.instance.seeds[currentCrop].plantSeed();
-
-                GetComponentInParent<SaveLoadField>().isPlanted = true;
-                GetComponentInParent<SaveLoadField>().currentCrop = currentCrop;
-                GetComponentInParent<SaveLoadField>().writeData();
-
-                emptyPlot = false;
-                rendComp.enabled = false;
+                float currency = GameObject.Find("CurrencyButton").GetComponent<CurrencyButton>().currency;
+                Debug.Log(currency);
+                if (currency > plotPrice)
+                {
+                    GameObject cropToBuild = BuildManager.instance.GetCropToBuild();
+                    cropType = Instantiate(cropToBuild, transform.position + positionOffset, transform.rotation);
+                    emptyPlot = false;
+                    Debug.LogError("need to draw money here");
+                }
             }
 
-        }
-        
-        
+            if (plantedPlot == false && emptyPlot == false)
+            {
+                currentCrop = SelectedSeed.GetComponent<ItemSelected>().selectedItem;
+
+                if (currentCrop == 0)
+                {
+                    currentCrop = 9;
+                }
+                else
+                {
+                    currentCrop -= 1;
+                }
+
+                //Decrement seed count TODO: not less than zero!!
+
+                if (BuildManager.instance.seeds[currentCrop].quantity > 0)
+                {
+
+                    cropType.GetComponent<FarmFieldScript>().currentCrop = currentCrop;
+
+                    BuildManager.instance.seeds[currentCrop].plantSeed();
+
+                    GetComponentInParent<SaveLoadField>().isPlanted = true;
+                    GetComponentInParent<SaveLoadField>().currentCrop = currentCrop;
+                    GetComponentInParent<SaveLoadField>().writeData();
+
+                    plantedPlot = true;
+                    rendComp.enabled = false;
+                }
+            }
+        }    
     }
 
    void OnMouseEnter()
@@ -136,7 +154,7 @@ public class NodeField : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         int layerMask = 1 << 8;
-        if (Physics.Raycast(ray, out hit, RayLength, layerMask) && emptyPlot == true)
+        if (Physics.Raycast(ray, out hit, RayLength, layerMask) && plantedPlot == false)
         {
             rendComp.material.color = hoverColor;
             inRange = true;
