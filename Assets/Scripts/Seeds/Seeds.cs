@@ -11,6 +11,7 @@ public class Seeds : MonoBehaviour
     protected Text QuantityText;
     protected Text SeedPrice;
     protected CurrencyButton currencyGui;
+    protected Text GrowthTime;
 
     public float price;
     public int quantity;

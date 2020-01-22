@@ -37,7 +37,8 @@ public class NodeField : MonoBehaviour
 
         rendComp = GetComponent<Renderer>();
 
-        SaveLoadField slv = GetComponentInParent<SaveLoadField>();
+        SaveLoadField slv = GetComponent<SaveLoadField>();
+
         if(slv.isPlanted)
         {
             Debug.Log("isPlanted");

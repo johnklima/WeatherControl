@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 19859537}
   - component: {fileID: 19859536}
   - component: {fileID: 19859540}
+  - component: {fileID: 19859541}
   m_Layer: 8
   m_Name: FarmSize
   m_TagString: Crop
@@ -617,6 +618,21 @@ MonoBehaviour:
   plotPrice: 10
   plotPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
     type: 3}
+--- !u!114 &19859541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19859535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83647daca0631043a781cd78f72dda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlanted: 0
+  currentCrop: -1
+  index: 0
 --- !u!1 &24498638
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,7 +939,6 @@ GameObject:
   - component: {fileID: 64318856}
   - component: {fileID: 64318859}
   - component: {fileID: 64318860}
-  - component: {fileID: 64318861}
   m_Layer: 8
   m_Name: FarmSize
   m_TagString: Untagged
@@ -1040,21 +1055,6 @@ MonoBehaviour:
   isPlanted: 0
   currentCrop: -1
   index: 3
---- !u!114 &64318861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64318854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a83647daca0631043a781cd78f72dda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlanted: 0
-  currentCrop: -1
-  index: 0
 --- !u!1 &74862591
 GameObject:
   m_ObjectHideFlags: 0
@@ -3704,7 +3704,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &431715844
 MonoBehaviour:
@@ -4167,7 +4166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &484695091
 MonoBehaviour:
@@ -4726,7 +4724,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &544313833
 MonoBehaviour:
@@ -5531,7 +5528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &599395625
 MonoBehaviour:
@@ -9812,7 +9808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &1190752348
 MonoBehaviour:
@@ -10459,7 +10454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &1256819128
 MonoBehaviour:
@@ -11759,7 +11753,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &1518938700
 MonoBehaviour:
@@ -11894,7 +11887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &1546904408
 MonoBehaviour:
@@ -14378,7 +14370,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &1949167593
 MonoBehaviour:
@@ -15328,7 +15319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 0
-  GrowthTimer: 0
   quantity: 0
 --- !u!114 &2070141918
 MonoBehaviour:
