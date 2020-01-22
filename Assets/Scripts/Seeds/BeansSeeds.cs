@@ -9,6 +9,7 @@ public class BeansSeeds : Seeds
     {
         getReferences();
         price = 2.45f;
+        GrowthTimer = 9f;
 
         try
         {
@@ -21,6 +22,7 @@ public class BeansSeeds : Seeds
         }
         QuantityText.text = "" + quantity;
         SeedPrice.text = "Cost : " + this.price + "£";
+        GrowthTime.text = "GrowthTime :" + GrowthTimer;
     }
 
     // Update is called once per frame
@@ -38,6 +40,6 @@ public class BeansSeeds : Seeds
     {
         string json = System.IO.File.ReadAllText("SeedData/Beans.txt");
         JsonUtility.FromJsonOverwrite(json, this);
-
+        
     }
 }

@@ -9,6 +9,7 @@ public class ParsnipSeeds : Seeds
     {
         getReferences();
         price = 1.65f;
+        GrowthTimer = 18f;
 
         try
         {
@@ -21,6 +22,7 @@ public class ParsnipSeeds : Seeds
         }
         QuantityText.text = "" + quantity;
         SeedPrice.text = "Cost : " + this.price + "£";
+        GrowthTime.text = "GrowthTime :" + GrowthTimer;
     }
 
     // Update is called once per frame

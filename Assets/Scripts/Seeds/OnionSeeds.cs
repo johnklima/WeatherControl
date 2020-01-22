@@ -9,6 +9,7 @@ public class OnionSeeds : Seeds
     {
         getReferences();
         price = 0.99f;
+        GrowthTimer = 3.6f;
 
         try
         {
@@ -20,6 +21,7 @@ public class OnionSeeds : Seeds
             writeSeed();
         }
         QuantityText.text = "" + quantity;
+        GrowthTime.text = "GrowthTime :" + GrowthTimer;
         SeedPrice.text = "Cost : " + this.price + "£";
     }
 

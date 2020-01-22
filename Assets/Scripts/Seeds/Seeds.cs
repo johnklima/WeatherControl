@@ -10,9 +10,11 @@ public class Seeds : MonoBehaviour
 
     protected Text QuantityText;
     protected Text SeedPrice;
+    protected Text GrowthTime;
     protected CurrencyButton currencyGui;
 
     public float price;
+    public float GrowthTimer;
     public int quantity;
 
     // Start is called before the first frame update

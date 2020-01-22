@@ -9,6 +9,7 @@ public class StrawberriesSeeds : Seeds
     {
         getReferences();
         price = 0.5f;
+        GrowthTimer = 2.3f;
 
         try
         {
@@ -20,6 +21,7 @@ public class StrawberriesSeeds : Seeds
             writeSeed();
         }
         QuantityText.text = "" + quantity;
+        GrowthTime.text = "GrowthTime :" + GrowthTimer;
         SeedPrice.text = "Cost : " + this.price + "£";
     }
 
