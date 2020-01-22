@@ -17,6 +17,7 @@ public class Seeds : MonoBehaviour
     public float GrowthTimer;
     public int quantity;
 
+
     // Start is called before the first frame update
     public void getReferences()
     {
@@ -29,7 +30,6 @@ public class Seeds : MonoBehaviour
     }
     void Start()
     {
-       
     }
     // Update is called once per frame
     void Update()
@@ -38,15 +38,20 @@ public class Seeds : MonoBehaviour
     }
     public void buy()
     {
-        quantity++;
-        QuantityText.text = "" + quantity;
-        //SeedPrice.text = "Cost : " + price + "£";
-        //Debug.LogError("Seedprice needs to be updated after start");
-        currencyGui.currency -= price;
-        currencyGui.GetComponentInChildren<Text>().text = "" + currencyGui.currency;
+        if (currencyGui.currency > price)
+        {
+            quantity++;
+            QuantityText.text = "" + quantity;
+            //SeedPrice.text = "Cost : " + price + "£";
+            //Debug.LogError("Seedprice needs to be updated after start");
+            currencyGui.currency -= price;
+            currencyGui.GetComponentInChildren<Text>().text = "" + currencyGui.currency;
 
-        writeSeed();
-        currencyGui.writeCurrency();
+            writeSeed();
+            currencyGui.writeCurrency();
+        }
+
+
 
 
     }
