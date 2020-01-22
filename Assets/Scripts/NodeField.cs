@@ -105,21 +105,26 @@ public class NodeField : MonoBehaviour
             }
 
 
-            GameObject cropToBuild = BuildManager.instance.GetCropToBuild();
-            cropType = Instantiate(cropToBuild, transform.position + positionOffset, transform.rotation);
-            
-            cropType.GetComponent<FarmFieldScript>().currentCrop = currentCrop;
 
 
             //Decrement seed count TODO: not less than zero!!
-            BuildManager.instance.seeds[currentCrop].plantSeed();
+            if (BuildManager.instance.seeds[currentCrop].quantity > 0)
+            {
+                GameObject cropToBuild = BuildManager.instance.GetCropToBuild();
+                cropType = Instantiate(cropToBuild, transform.position + positionOffset, transform.rotation);
 
-            GetComponentInParent<SaveLoadField>().isPlanted = true;
-            GetComponentInParent<SaveLoadField>().currentCrop = currentCrop;
-            GetComponentInParent<SaveLoadField>().writeData();
+                cropType.GetComponent<FarmFieldScript>().currentCrop = currentCrop;
 
-           emptyPlot = false;
-            rendComp.enabled = false;
+                BuildManager.instance.seeds[currentCrop].plantSeed();
+
+                GetComponentInParent<SaveLoadField>().isPlanted = true;
+                GetComponentInParent<SaveLoadField>().currentCrop = currentCrop;
+                GetComponentInParent<SaveLoadField>().writeData();
+
+                emptyPlot = false;
+                rendComp.enabled = false;
+            }
+
         }
         
         

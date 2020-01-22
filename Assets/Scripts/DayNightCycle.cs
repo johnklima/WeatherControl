@@ -44,7 +44,6 @@ public class DayNightCycle : MonoBehaviour
         if (isDay == true)
         {
             theSunLight.color = DaytimeColor;
-            theSunLight.intensity = 1f;
             currentDayTime -= Time.deltaTime;
             if(currentDayTime < 0f)
             {
@@ -55,7 +54,6 @@ public class DayNightCycle : MonoBehaviour
         else
         {
             theSunLight.color = nighttimeColor;
-            theSunLight.intensity = 0.5f;
             currentNightTime -= Time.deltaTime;
             if (currentNightTime < 0f)
             {

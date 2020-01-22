@@ -18,6 +18,7 @@ public class Seeds : MonoBehaviour
     public int quantity;
 
 
+
     // Start is called before the first frame update
     public void getReferences()
     {
@@ -30,6 +31,7 @@ public class Seeds : MonoBehaviour
     }
     void Start()
     {
+
     }
     // Update is called once per frame
     void Update()
@@ -49,6 +51,9 @@ public class Seeds : MonoBehaviour
 
             writeSeed();
             currencyGui.writeCurrency();
+
+
+
         }
 
 
