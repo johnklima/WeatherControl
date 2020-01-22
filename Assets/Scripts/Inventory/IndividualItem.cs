@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class IndividualItem : MonoBehaviour
 {
+    //By : John Hauge
+
+    // if selection key is on 0 by default it will for some reason select everything;
     public int SelectionKey = 22;
     private KeyCode theKey;
     private bool isBold;
@@ -22,20 +25,24 @@ public class IndividualItem : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
     {
-        //this key is selected
-        if (Input.GetKeyDown(theKey))
+        if(SelectionKey == daddy.selectedItem)
         {
             GetComponent<Text>().fontStyle = FontStyle.Bold;
             isBold = true;
-            daddy.selectedItem = SelectionKey;
         }
-        //this key isn't seleceted
-        else if (Input.anyKeyDown == true && isBold == true)
+        else
         {
             GetComponent<Text>().fontStyle = FontStyle.Normal;
             isBold = false;
+        }
+
+        //this key is selected
+        if (Input.GetKeyDown(theKey))
+        {
+            daddy.selectedItem = SelectionKey;
         }
     }
 }
