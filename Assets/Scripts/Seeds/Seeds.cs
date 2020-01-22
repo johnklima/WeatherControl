@@ -19,7 +19,7 @@ public class Seeds : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
+   
     public void getReferences()
     {
         //grab the references permanently include in SeedReferences and stuff them here
@@ -27,8 +27,10 @@ public class Seeds : MonoBehaviour
         QuantityText = GetComponent<SeedReferences>().QuantityText;
         SeedPrice = GetComponent<SeedReferences>().SeedPrice;
         currencyGui = GetComponent<SeedReferences>().currencyGui;
+        GrowthTime = GetComponent<SeedReferences>().GrowthTime;
 
     }
+    // Start is called before the first frame update
     void Start()
     {
 

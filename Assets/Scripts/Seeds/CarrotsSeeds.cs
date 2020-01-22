@@ -8,6 +8,7 @@ public class CarrotsSeeds : Seeds
     void Awake()
     {
         getReferences();
+
         price = 0.95f;
         GrowthTimer = 14.4f;
 

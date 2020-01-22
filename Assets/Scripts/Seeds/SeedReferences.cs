@@ -8,5 +8,6 @@ public class SeedReferences : MonoBehaviour
     public Text QuantityText;
     public Text SeedPrice;
     public CurrencyButton currencyGui;
+    public Text GrowthTime;
 
 }
