@@ -15,6 +15,7 @@ public class Seeds : MonoBehaviour
 
     public float price;
     public int quantity;
+    public float growthTime = 2.0f;
 
 
 

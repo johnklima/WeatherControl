@@ -8,8 +8,9 @@ public class BeansSeeds : Seeds
     void Awake()
     {
         getReferences();
-        price = 2.45f;
 
+        price = 2.45f;
+        
         try
         {
             readSeed();

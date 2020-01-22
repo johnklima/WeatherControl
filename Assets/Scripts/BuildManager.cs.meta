@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - standardCropPrefab: {fileID: 8628555281644846304, guid: cf0d7b4a16cdf344389bd5a69a0d7f32,
       type: 3}
-  executionOrder: 0
+  executionOrder: -50
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

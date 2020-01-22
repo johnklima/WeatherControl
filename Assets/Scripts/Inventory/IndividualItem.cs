@@ -13,6 +13,7 @@ public class IndividualItem : MonoBehaviour
     private bool isBold;
 
     private ItemSelected daddy;
+    public SeedList seedList;
 
 
     // Start is called before the first frame update
@@ -32,6 +33,15 @@ public class IndividualItem : MonoBehaviour
         {
             GetComponent<Text>().fontStyle = FontStyle.Bold;
             isBold = true;
+            int seedIndex = daddy.selectedItem;
+            if (seedIndex == 0)
+                seedIndex = 9;
+            else
+                seedIndex--;
+
+            //reference the seed object
+            float gt = seedList.seeds[seedIndex].growthTime;
+            seedList.seeds[seedIndex].GetComponent<SeedReferences>().GrowthTime.text = ""+ gt;
         }
         else
         {
