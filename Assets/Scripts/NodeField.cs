@@ -106,13 +106,17 @@ public class NodeField : MonoBehaviour
             if ( emptyPlot == true)
             {
                 float currency = GameObject.Find("CurrencyButton").GetComponent<CurrencyButton>().currency;
-                Debug.Log(currency);
                 if (currency > plotPrice)
                 {
-                    GameObject cropToBuild = BuildManager.instance.GetCropToBuild();
-                    cropType = Instantiate(cropToBuild, transform.position + positionOffset, transform.rotation);
+                    cropType = Instantiate(plotPrefab, transform.position, transform.rotation);
+
+                    //Give "parent" Reference
+                    cropType.GetComponent<FarmFieldScript>().TheCropField = transform.gameObject;
+
+                    //Take Money
                     emptyPlot = false;
                     Debug.LogError("need to draw money here");
+                    return;
                 }
             }
 
@@ -129,7 +133,8 @@ public class NodeField : MonoBehaviour
                     currentCrop -= 1;
                 }
 
-                //Decrement seed count TODO: not less than zero!!
+                cropType.GetComponent<FarmFieldScript>().Planted(true);
+                
 
                 if (BuildManager.instance.seeds[currentCrop].quantity > 0)
                 {

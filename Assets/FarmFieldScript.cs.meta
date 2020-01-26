@@ -3,7 +3,10 @@ guid: c4c2259ff3b1cd44a987253be165da68
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - TheCropField: {instanceID: 0}
+  - stageOnePrefab: {fileID: 3390786060795831316, guid: 531b2932377feec4a835ad89471135d3,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

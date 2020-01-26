@@ -45,6 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c2259ff3b1cd44a987253be165da68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCrop: 1
+  growthTime: 0
+  TheCropField: {fileID: 0}
+  stageOnePrefab: {fileID: 3390786060795831316, guid: 531b2932377feec4a835ad89471135d3,
+    type: 3}
+  isplanted: 0
+  stage2: 0
 --- !u!1001 &8628555283149750800
 PrefabInstance:
   m_ObjectHideFlags: 0
