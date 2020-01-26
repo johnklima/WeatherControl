@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 34053444428016526}
+  - component: {fileID: 3954796045982383535}
   m_Layer: 0
   m_Name: Crops_Stage_1
   m_TagString: Untagged
@@ -114,6 +115,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3954796045982383535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3390786060795831316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f635036b25487d9439b7584f79f7486b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seedplanted: 0
+  seedBag:
+  - {fileID: 8745560691313026489, guid: 2f3f4658084838b4b9c5d614f4dbf55a, type: 3}
+  - {fileID: 4999972374735831673, guid: 46a73ff41ff55c94299d191b8fdaab84, type: 3}
+  - {fileID: 4681111697671346170, guid: 9e0a7006ffb42ba4eb055fd781813a00, type: 3}
+  - {fileID: 2783714147597816448, guid: d80cc03c495a2094bba5f1d434af1385, type: 3}
+  - {fileID: 4292686438844596844, guid: 4417d569cb09d1f43945650ce8c41790, type: 3}
+  - {fileID: 1424171721990591329, guid: 01e3e412f54881342a58dfb9f04d4afe, type: 3}
+  - {fileID: 739842797931119879, guid: 2236603cb071d074c9749eae86eeea06, type: 3}
+  - {fileID: 5305367747470106193, guid: bdc5b9cd2f3e6c1498de3cfb57e1cfbf, type: 3}
+  - {fileID: 6620434198322073966, guid: 09e6adc9b20a51343ac5a6137202b41e, type: 3}
+  - {fileID: 1661554457474669977, guid: 9e7f1efb9f1f7764091d349e63c634bb, type: 3}
 --- !u!1001 &124346966282545542
 PrefabInstance:
   m_ObjectHideFlags: 0

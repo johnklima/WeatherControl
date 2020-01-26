@@ -13,6 +13,7 @@ public class FarmFieldScript : MonoBehaviour
     public GameObject TheCropField;
 
     public GameObject stageOnePrefab;
+    private Vector3 StageOneOffset = new Vector3(0f,0.3f,0f);
 
     private GameObject currentStage;
 
@@ -50,7 +51,7 @@ public class FarmFieldScript : MonoBehaviour
                 {
                     stage1bool = true;
                     Debug.Log("Stage1");
-                    currentStage = Instantiate(stageOnePrefab, transform);
+                    currentStage = Instantiate(stageOnePrefab, transform.position + StageOneOffset,transform.rotation,transform);
                     currentStage.GetComponent<CropStageOne>().seedplanted = currentCrop;
                 }
             }
