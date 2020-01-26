@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FarmFieldScript : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class FarmFieldScript : MonoBehaviour
     public float growthTime;
     public GameObject TheCropField;
 
+    //TimeLeft Counter
+
+    public TextMeshPro Counter1;
+    public TextMeshPro Counter2;
+
+    //Crop Stage 1
     public GameObject stageOnePrefab;
     private Vector3 StageOneOffset = new Vector3(0f,0.3f,0f);
 
@@ -19,10 +26,12 @@ public class FarmFieldScript : MonoBehaviour
 
     public bool isplanted;
 
+    //StageTriggers
     private bool stage1bool;
     private bool stage2bool;
     private bool stage3bool;
 
+    //Stage 2 time trigger
     public float stage2;
 
     private void Start()
@@ -35,12 +44,15 @@ public class FarmFieldScript : MonoBehaviour
     void awake()
     {
         isplanted = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if (isplanted == true)
+        Counter1.text = growthTime.ToString("N0");
+        Counter2.text = growthTime.ToString("N0");
         {
             growthTime -= Time.deltaTime;
 
@@ -72,6 +84,7 @@ public class FarmFieldScript : MonoBehaviour
 
     public void Planted(bool PlantedCrop)
     {
+
         isplanted = PlantedCrop;
         growthTime = GameObject.Find("SeedList").GetComponent<SeedList>().seeds[currentCrop].growthTime;
         //min to sec converter
