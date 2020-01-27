@@ -7,7 +7,7 @@ public class Villager : MonoBehaviour
 {
     NavMeshAgent agent;
     private GameObject player;
-    public Transform ChurchWaypoint;
+    public GameObject ChurchWaypoint;
     public bool spottedPlayer = false;
     public List<Transform> patrolPoints;
     private int curIndex;
@@ -15,6 +15,8 @@ public class Villager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ChurchWaypoint = GameObject.Find("ChurchSpawner");
+        Debug.Log(ChurchWaypoint);
         GameObject[] patrolobj = GameObject.FindGameObjectsWithTag("Crop");
         foreach (GameObject i in patrolobj)
         {
@@ -49,7 +51,7 @@ public class Villager : MonoBehaviour
 
         if (spottedPlayer)
         {
-            agent.SetDestination(ChurchWaypoint.position);
+            agent.SetDestination(ChurchWaypoint.transform.position);
         }
     }
 }

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 9116872104907832592}
   m_Layer: 2
   m_Name: Priest
-  m_TagString: Untagged
+  m_TagString: Priest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53a378b279ad634aa91a97d199920c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcAIscript: {fileID: 9116872104907832595}
   didhit: 0
 --- !u!64 &9116872105068251419
 MeshCollider:

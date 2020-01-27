@@ -71,7 +71,7 @@ public class SpottedPlayerOne : MonoBehaviour
                 {
                     transform.parent.GetComponent<Priest>().spottedPlayer = true;
                 }
-                else
+                if (transform.parent.gameObject.tag == ("Villager"))
                 {
                     transform.parent.GetComponent<Villager>().spottedPlayer = true;
                 }

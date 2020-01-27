@@ -10261,7 +10261,7 @@ MonoBehaviour:
   - {fileID: 583519438}
   - {fileID: 1461496580}
   Prefab: {fileID: 9157237631544627948, guid: 373dcb7f62bc3934ca9a589ec40f9db7, type: 3}
-  spawnTimerMinutes: 0.2
+  spawnTimerMinutes: 2
 --- !u!4 &1088618883
 Transform:
   m_ObjectHideFlags: 0
