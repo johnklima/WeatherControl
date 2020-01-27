@@ -5,17 +5,30 @@ using UnityEngine;
 public class SpawnVillager : MonoBehaviour
 {
 
-    public Transform Spawnpoint;
+    public GameObject[] Spawnpoints;
     public GameObject Prefab;
-    GameObject[] villagerList;
+
+
+    // How often does a villager spawn?
+    public float spawnTimerMinutes = 2;
+    private float counter;
+
+    private void Start()
+    {
+        spawnTimerMinutes *= 60;
+        counter = spawnTimerMinutes;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        villagerList = GameObject.FindGameObjectsWithTag("Villager");
-        if(villagerList.Length <= 2)
+        counter -= Time.deltaTime;
+
+        if (counter < 0)
         {
-            Instantiate(Prefab, Spawnpoint.position, Spawnpoint.rotation);
+            GameObject spawnPos = Spawnpoints[Random.Range(0, Spawnpoints.Length)];
+            Instantiate(Prefab, spawnPos.transform.position, spawnPos.transform.rotation);
+            counter = spawnTimerMinutes;
         }
 
     }

@@ -19,7 +19,7 @@ public class SpottedPlayerTwo : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         //if the cone collides with player, chase the player
         if (other.tag == "Player")

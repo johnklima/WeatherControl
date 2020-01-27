@@ -49,7 +49,6 @@ public class Villager : MonoBehaviour
 
         if (spottedPlayer)
         {
-            int curIndex = Random.Range(24, 24);
             agent.SetDestination(ChurchWaypoint.position);
         }
     }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpottedPlayerOne : MonoBehaviour
 {
 
-    public Priest npcAIscript = null;
     public bool didhit = false;
     private GameObject playHit;
     //private GameObject Parent;
@@ -14,7 +13,6 @@ public class SpottedPlayerOne : MonoBehaviour
     void Start()
     {
         //Parent = GameObject.Find("Priest");
-        npcAIscript = null;
         
     }
 
@@ -69,8 +67,15 @@ public class SpottedPlayerOne : MonoBehaviour
             if (playHit.tag == "Player")
             { //follow player
                 Debug.Log("hit Player");
-                npcAIscript = transform.parent.GetComponent<Priest>();
-                npcAIscript.spottedPlayer = true;
+                if (transform.parent.gameObject.tag == ("Priest"))
+                {
+                    transform.parent.GetComponent<Priest>().spottedPlayer = true;
+                }
+                else
+                {
+                    transform.parent.GetComponent<Villager>().spottedPlayer = true;
+                }
+
             }
             Debug.Log("End");
 
