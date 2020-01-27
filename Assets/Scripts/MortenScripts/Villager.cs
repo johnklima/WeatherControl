@@ -6,15 +6,21 @@ using UnityEngine.AI;
 public class Villager : MonoBehaviour
 {
     NavMeshAgent agent;
-    public Transform player;
+    private GameObject player;
+    public Transform ChurchWaypoint;
     public bool spottedPlayer = false;
-
-    public Transform[] patrolPoints = new Transform[25];
+    public List<Transform> patrolPoints;
     private int curIndex;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameObject[] patrolobj = GameObject.FindGameObjectsWithTag("Crop");
+        foreach (GameObject i in patrolobj)
+        {
+            patrolPoints.Add(i.transform);
+        }
+        player = GameObject.FindGameObjectWithTag("Player");
         int curIndex = Random.Range(0, 23);
         agent = GetComponent<NavMeshAgent>();
         try { agent.SetDestination(patrolPoints[curIndex].position); }
@@ -29,7 +35,7 @@ public class Villager : MonoBehaviour
     {
         if (agent.remainingDistance < 10.0f && !spottedPlayer)
         {
-            int curIndex = Random.Range(0, 23);
+            int curIndex = Random.Range(0, patrolPoints.Count);
             try
             { 
                 agent.SetDestination(patrolPoints[curIndex].position); 
@@ -44,7 +50,7 @@ public class Villager : MonoBehaviour
         if (spottedPlayer)
         {
             int curIndex = Random.Range(24, 24);
-            agent.SetDestination(patrolPoints[curIndex].position);
+            agent.SetDestination(ChurchWaypoint.position);
         }
     }
 }

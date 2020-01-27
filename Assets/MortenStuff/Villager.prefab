@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9157237631544627946}
   - component: {fileID: 9157237631544627947}
   - component: {fileID: 9157237631544627944}
-  - component: {fileID: 9157237631544627951}
+  - component: {fileID: 3529321809806803058}
   - component: {fileID: 9157237631544627945}
   - component: {fileID: 9157237631544627950}
   - component: {fileID: 9157237631544627861}
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9157237631544627951
+--- !u!114 &3529321809806803058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,13 +93,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9157237631544627948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9fd4947533b67843b445a7ea6efdb40, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ae23c793356cf840ae775ed17c56786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  church: {fileID: 0}
-  spottedPlayer: 0
-  doom: 2
+  player: {fileID: 0}
+  spottedPlayer: 1
   patrolPoints:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -236,7 +236,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fa505519e7f70e74d83de9fa8e285ff4, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -283,4 +283,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32ee9c9ffff63d478c2598852e443fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcAIscript: {fileID: 9157237631544627951}
+  npcAIscript: {fileID: 0}

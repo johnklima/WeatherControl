@@ -24,7 +24,7 @@ public class SpottedPlayerOne : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         //if the cone collides with player, chase the player
         if (other.tag == "Player")
@@ -75,5 +75,13 @@ public class SpottedPlayerOne : MonoBehaviour
             Debug.Log("End");
 
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (transform.parent.gameObject.tag == "Priest")
+        {
+            transform.parent.GetComponent<Priest>().spottedPlayer = false;
+        }
+
     }
 }
