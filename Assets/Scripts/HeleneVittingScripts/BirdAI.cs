@@ -72,7 +72,7 @@ public class BirdAI : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, spawnPoint.transform.position, speed * Time.deltaTime);
 
-            if (transform.position == spawnPoint.transform.position)
+            if (Vector3.Distance (transform.position, spawnPoint.transform.position) <= 5)
             {
                 cropScript.isTaken = false;
                 Destroy(gameObject);
