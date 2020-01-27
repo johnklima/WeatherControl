@@ -6,11 +6,15 @@ public class SpottedPlayerOne : MonoBehaviour
 {
 
     public Priest npcAIscript = null;
+    public bool didhit = false;
+    public GameObject playHit;
+ 
 
     // Start is called before the first frame update
     void Start()
     {
         npcAIscript = null;
+        
     }
 
     // Update is called once per frame
@@ -44,6 +48,7 @@ public class SpottedPlayerOne : MonoBehaviour
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 Debug.Log("Did Hit");
                 didhit = true;
+
             }
             else
             {
@@ -51,7 +56,7 @@ public class SpottedPlayerOne : MonoBehaviour
                 Debug.Log("Did not Hit");
             }
 
-            if (!didhit)
+            if (didhit == true && playHit.tag == "Player")
             { //follow player
                 npcAIscript = transform.parent.GetComponent<Priest>();
                 npcAIscript.spottedPlayer = true;

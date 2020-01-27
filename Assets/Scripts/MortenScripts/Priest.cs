@@ -6,22 +6,20 @@ using UnityEngine.AI;
 public class Priest : MonoBehaviour
 {
     NavMeshAgent agent;
-    public Transform player;
     public float cooldown = -1;
     public bool spottedPlayer = false;
-
-    public Transform[] patrolPoints = new Transform[24];
     private int curIndex;
+    public GameObject[] patrolPoints;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
-        int curIndex = Random.Range(0, 23);
+        Player = GameObject.FindGameObjectWithTag("Player");
+        patrolPoints = GameObject.FindGameObjectsWithTag("Waypoint");
+        int curIndex = Random.Range(0, patrolPoints.Length);
         agent = GetComponent<NavMeshAgent>();
-        try { agent.SetDestination(patrolPoints[curIndex].position); }       
-        catch
-        { }
-
+        agent.SetDestination(patrolPoints[curIndex].transform.position); 
     }
 
     // Update is called once per frame
@@ -29,39 +27,30 @@ public class Priest : MonoBehaviour
     {
         if (agent.remainingDistance < 10.0f && !spottedPlayer)
         {
-            int curIndex = Random.Range(0, 23);
-
-            try
-            {
-                agent.SetDestination(patrolPoints[curIndex].position);
-            }
-            catch
-            {
-                Debug.Log("No Patrol points on Priest.");
-            }
-
-           
+            int curIndex = Random.Range(0, patrolPoints.Length);
+            agent.SetDestination(patrolPoints[curIndex].transform.position);
         }
 
-        if (spottedPlayer == true)
+       if (spottedPlayer = true)
         {
-            if (agent.remainingDistance > 3.0f)
+
+           if (agent.remainingDistance > 3.0f)
             {
-                agent.SetDestination(player.position);
+                agent.SetDestination(Player.transform.position);
             }
-            else if (cooldown < 0)
+         else if (cooldown < 0)
             {
-                agent.isStopped = true;
-                cooldown = Time.time;
+             agent.isStopped = true;
+             cooldown = Time.time;
             }
-            //reset destination and timer
-            if (cooldown > 0 && Time.time - cooldown > 3.0f)
+
+         //reset destination and timer
+        if (cooldown > 0 && Time.time - cooldown > 3.0f)
             {
                 cooldown = -1;
                 agent.isStopped = false;
-                agent.SetDestination(player.position);
+                agent.SetDestination(Player.transform.position);
             }
         }
-
     }
 }
