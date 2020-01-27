@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4853358107396768135}
   - component: {fileID: 8368281709774726966}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: SignFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 8135541121499284693}
   - component: {fileID: 8345421024897769241}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: SignBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
