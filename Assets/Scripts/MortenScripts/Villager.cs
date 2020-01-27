@@ -11,10 +11,16 @@ public class Villager : MonoBehaviour
     public bool spottedPlayer = false;
     public List<Transform> patrolPoints;
     private int curIndex;
-
+    public GameObject[] exits;
+    private bool exiting;
+    private bool running;
+    public float PatrolTimerMin;
     // Start is called before the first frame update
     void Start()
     {
+        running = false;
+        exiting = false;
+        PatrolTimerMin *= 60f;
         ChurchWaypoint = GameObject.Find("ChurchSpawner");
         Debug.Log(ChurchWaypoint);
         GameObject[] patrolobj = GameObject.FindGameObjectsWithTag("Crop");
@@ -35,7 +41,9 @@ public class Villager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent.remainingDistance < 10.0f && !spottedPlayer)
+        PatrolTimerMin -= Time.deltaTime;
+
+        if (agent.remainingDistance < 10.0f && spottedPlayer == false)
         {
             int curIndex = Random.Range(0, patrolPoints.Count);
             try
@@ -47,11 +55,28 @@ public class Villager : MonoBehaviour
                 Debug.Log("No Patrol points on Villager");
             }
             
-        }
 
-        if (spottedPlayer)
+        }
+        if (spottedPlayer == true)
         {
             agent.SetDestination(ChurchWaypoint.transform.position);
+            if(running == false)
+            {
+                agent.speed *= 2;
+                running = true;
+            }
+            
+        }
+
+        if (PatrolTimerMin > 0f)
+        {
+            if (exiting == false)
+            {
+                GameObject exit = exits[Random.Range(0, exits.Length)];
+                agent.SetDestination(exit.transform.position);
+                exiting = true;
+            }
+
         }
     }
 }

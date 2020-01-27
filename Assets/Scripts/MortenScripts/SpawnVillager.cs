@@ -10,6 +10,7 @@ public class SpawnVillager : MonoBehaviour
 
 
     // How often does a villager spawn?
+    public float PatrolTime = 2;
     public float spawnTimerMinutes = 2;
     private float counter;
 
@@ -27,7 +28,9 @@ public class SpawnVillager : MonoBehaviour
         if (counter < 0)
         {
             GameObject spawnPos = Spawnpoints[Random.Range(0, Spawnpoints.Length)];
-            Instantiate(Prefab, spawnPos.transform.position, spawnPos.transform.rotation);
+            GameObject spawnedVillager = Instantiate(Prefab, spawnPos.transform.position, spawnPos.transform.rotation);
+            spawnedVillager.GetComponent<Villager>().exits = Spawnpoints;
+            spawnedVillager.GetComponent<Villager>().PatrolTimerMin = PatrolTime;
             counter = spawnTimerMinutes;
         }
 

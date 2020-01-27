@@ -32,7 +32,6 @@ public class IndividualItem : MonoBehaviour
         if(SelectionKey == daddy.selectedItem)
         {
             GetComponent<Text>().fontStyle = FontStyle.Bold;
-            isBold = true;
             int seedIndex = daddy.selectedItem;
             if (seedIndex == 0)
                 seedIndex = 9;
@@ -46,7 +45,6 @@ public class IndividualItem : MonoBehaviour
         else
         {
             GetComponent<Text>().fontStyle = FontStyle.Normal;
-            isBold = false;
         }
 
         //this key is selected
