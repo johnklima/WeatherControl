@@ -13,6 +13,9 @@ public class FarmFieldScript : MonoBehaviour
     public float growthTime;
     public GameObject TheCropField;
 
+    //List of Prefab Growth Stages
+    public GameObject[] StageTwoPrefab;
+    public GameObject[] StageThreePrefab;
     //TimeLeft Counter
 
     public TextMeshPro Counter1;
@@ -25,6 +28,7 @@ public class FarmFieldScript : MonoBehaviour
     private GameObject currentStage;
 
     public bool isplanted;
+    private bool isFinished;
 
     //StageTriggers
     private bool stage1bool;
@@ -39,6 +43,8 @@ public class FarmFieldScript : MonoBehaviour
         stage1bool = false;
         stage2bool = false;
         stage3bool = false;
+
+        isFinished = false;
     }
 
     void awake()
@@ -50,12 +56,11 @@ public class FarmFieldScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isplanted == true)
-        Counter1.text = growthTime.ToString("N0");
-        Counter2.text = growthTime.ToString("N0");
+        if (isplanted == true && isFinished == false)
         {
             growthTime -= Time.deltaTime;
-
+            Counter1.text = growthTime.ToString("N0");
+            Counter2.text = growthTime.ToString("N0");
 
             if (growthTime > stage2)
             {
@@ -65,6 +70,7 @@ public class FarmFieldScript : MonoBehaviour
                     Debug.Log("Stage1");
                     currentStage = Instantiate(stageOnePrefab, transform.position + StageOneOffset,transform.rotation,transform);
                     currentStage.GetComponent<CropStageOne>().seedplanted = currentCrop;
+                    return;
                 }
             }
             if (growthTime < stage2)
@@ -72,14 +78,28 @@ public class FarmFieldScript : MonoBehaviour
                 if (stage2bool == false)
                 {
                     Destroy(currentStage);
+                    
                     Debug.Log("stage2");
                     stage1bool = false;
                     stage2bool = true;
-
+                    currentStage = Instantiate(StageTwoPrefab[currentCrop], transform.position, transform.rotation, transform);
+                    return;
                 }
             }
-
+            if (growthTime < 0f)
+            {
+                if (stage3bool == false)
+                {
+                    Destroy(currentStage);
+                    currentStage = Instantiate(StageThreePrefab[currentCrop], transform.position, transform.rotation, transform);
+                    Debug.Log("stage3 Finished Crop");
+                    stage2bool = false;
+                    stage3bool = true;
+                    isFinished = true;
+                }
+            }
         }
+
     }
 
     public void Planted(bool PlantedCrop)

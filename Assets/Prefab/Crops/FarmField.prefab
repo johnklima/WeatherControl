@@ -758,6 +758,28 @@ MonoBehaviour:
   currentCrop: 1
   growthTime: 0
   TheCropField: {fileID: 0}
+  StageTwoPrefab:
+  - {fileID: 3947486556097719721, guid: b5fc4586b0179df4bb39c24d963e0c86, type: 3}
+  - {fileID: 3775825824372011837, guid: 766b9657c5786a244a70b2337fa8f9c7, type: 3}
+  - {fileID: 892794725235199665, guid: 8083c27543ce8134ab24f9e3097e3165, type: 3}
+  - {fileID: 3901855580320840507, guid: c7b084c947d37f44fa63132d11cfbc85, type: 3}
+  - {fileID: 8601701838582244368, guid: dff6728e91322114982a74af6a35e751, type: 3}
+  - {fileID: 2975784586586674063, guid: e8990a519c36743419466e71dfb19fd3, type: 3}
+  - {fileID: 4691669041441268529, guid: c021d915050e87a44972f6d16b38bc76, type: 3}
+  - {fileID: 7056735567557434343, guid: 632860b6166af9f4dbf0f72352d2eaa3, type: 3}
+  - {fileID: 626427344786716915, guid: 6794398d792844a468e41a249c3bd5c6, type: 3}
+  - {fileID: 7303686065133513263, guid: d8c26c90b06ac95478d4c5595405d0bc, type: 3}
+  StageThreePrefab:
+  - {fileID: 8638891841191874270, guid: c4bd0521fc132ec43b733f263f167543, type: 3}
+  - {fileID: 3063418207202921970, guid: 2dff0e57bdde0ed4a9bb1e32af2985e3, type: 3}
+  - {fileID: 9222317572453613930, guid: cde7a16d6fcb0044bb2a2f7757284e84, type: 3}
+  - {fileID: 1953081398228134819, guid: f7e4aabb244ba7d41966beb2257068ac, type: 3}
+  - {fileID: 5339541916386298761, guid: cc4106615be3a4246a43f22ea9cae517, type: 3}
+  - {fileID: 8238281794936903564, guid: c9cccf904260e7c469a6466600b1a7ad, type: 3}
+  - {fileID: 2914107642355780500, guid: 71194c7a3b9ec5a4f82806881ebdac9f, type: 3}
+  - {fileID: 8345124877346644604, guid: 58f73af8fc8539a4ebde1820cbc323e3, type: 3}
+  - {fileID: 5572232475904344860, guid: e0f3aacc984addb46b4e5ffa589b5976, type: 3}
+  - {fileID: 6920846281406255934, guid: 9a95f9c38c64aba45bb3df6e48ce8ce7, type: 3}
   Counter1: {fileID: 6182550538634474732}
   Counter2: {fileID: 7401842744667487755}
   stageOnePrefab: {fileID: 3390786060795831316, guid: 531b2932377feec4a835ad89471135d3,
