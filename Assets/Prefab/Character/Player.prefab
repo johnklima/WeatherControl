@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 5024939903056664909}
   - component: {fileID: 5024939903056664908}
   - component: {fileID: 5024939903056664907}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.7058824, g: 0.7490196, b: 0.54901963, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -411,7 +411,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -445,7 +445,7 @@ MonoBehaviour:
   lockCursor: 1
   mouseSens: 10
   target: {fileID: 5024939901953248132}
-  dstFromTarget: 2
+  dstFromTarget: 5
   pitchMinMax: {x: -40, y: 85}
   rotationSmoothTime: 0.12
 --- !u!1 &5024939903205929135
@@ -556,9 +556,9 @@ GameObject:
   - component: {fileID: 8583185856419340302}
   - component: {fileID: 5024939902196766150}
   - component: {fileID: 5024939902196766151}
-  m_Layer: 2
-  m_Name: Player 1
-  m_TagString: Untagged
+  m_Layer: 8
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fececa147b08a504dab988e4107e3938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 4
-  runSpeed: 6
+  walkSpeed: 5
+  runSpeed: 10
   turnSmoothTime: 0.2
   speedSmoothTime: 0.1

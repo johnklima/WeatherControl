@@ -7,7 +7,8 @@ public class NodeField : MonoBehaviour
 
     public Vector3 positionOffset;
     private float RayLength;
-    
+
+    private AudioSource AudioS;
     private GameObject cropType;
     public GameObject SelectedSeed;
 
@@ -15,7 +16,9 @@ public class NodeField : MonoBehaviour
 
     private bool inRange;
 
-
+    //PlantingSounds
+    public AudioClip Placefield;
+    public AudioClip PlaceSeed;
     //PlotInfo
     public int currentCrop = 0;
     private float plantedTimer;
@@ -29,6 +32,7 @@ public class NodeField : MonoBehaviour
 
     void Start()
     {
+        AudioS = GetComponent<AudioSource>();
         RayLength = BuildManager.instance.InterLength();
 
         emptyPlot = true;
@@ -91,15 +95,6 @@ public class NodeField : MonoBehaviour
 
     void OnMouseDown()
     {
-        /*
-        if (cropType != null)
-        {
-            Debug.Log("Can't plant here");
-            return;
-        }
-        */
-
-
         if (inRange == true)
         {
 
@@ -116,6 +111,8 @@ public class NodeField : MonoBehaviour
                     //Take Money
                     emptyPlot = false;
                     Debug.LogError("need to draw money here");
+                    AudioS.clip = Placefield;
+                    AudioS.Play();
                     return;
                 }
             }
@@ -149,6 +146,8 @@ public class NodeField : MonoBehaviour
 
                     plantedPlot = true;
                     rendComp.enabled = false;
+                    AudioS.clip = PlaceSeed;
+                    AudioS.Play();
                 }
             }
         }    
@@ -160,13 +159,16 @@ public class NodeField : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         int layerMask = 1 << 8;
+
         if (Physics.Raycast(ray, out hit, RayLength, layerMask) && plantedPlot == false)
         {
+            Debug.Log("Should Work");
             rendComp.material.color = hoverColor;
             inRange = true;
         }
         else
         {
+            Debug.Log("Should not Work");
             inRange = false;
         }
         

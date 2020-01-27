@@ -69,7 +69,7 @@ public class Villager : MonoBehaviour
             
         }
 
-        if (PatrolTimerMin < 0f)
+        if (PatrolTimerMin < 0f && spottedPlayer == false)
         {
             if (exiting == false)
             {
