@@ -867,7 +867,7 @@ PrefabInstance:
     - target: {fileID: 4729261513240242941, guid: ac868b26a84c22b46b2091644c84c686,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4729261513240242941, guid: ac868b26a84c22b46b2091644c84c686,
         type: 3}
@@ -1158,7 +1158,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 45215e959d7cdf440bca57903291bd76,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 45215e959d7cdf440bca57903291bd76,
         type: 3}
@@ -1215,7 +1215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &83457497
 GameObject:
@@ -1299,7 +1299,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 21.279001, y: -98.22201, z: -2.8500001}
 --- !u!114 &83457501
 MonoBehaviour:
@@ -2354,7 +2354,7 @@ PrefabInstance:
     - target: {fileID: 4432595050209838343, guid: 55894e566fb7cb84d8fd185769da15af,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4432595050209838343, guid: 55894e566fb7cb84d8fd185769da15af,
         type: 3}
@@ -5697,7 +5697,7 @@ GameObject:
   - component: {fileID: 583519441}
   - component: {fileID: 583519440}
   m_Layer: 0
-  m_Name: VillagerSpawner()
+  m_Name: VillagerSpawner(5)
   m_TagString: VillagerSpawns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6487,7 +6487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627847829
 GameObject:
@@ -7452,7 +7452,7 @@ Transform:
   - {fileID: 1987417603}
   - {fileID: 1351438608}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 89.989006, z: 0}
 --- !u!1 &725549633
 GameObject:
@@ -7838,7 +7838,7 @@ GameObject:
   - component: {fileID: 795249964}
   - component: {fileID: 795249963}
   m_Layer: 0
-  m_Name: VillagerSpawner()
+  m_Name: VillagerSpawner(1)
   m_TagString: VillagerSpawns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8803,7 +8803,7 @@ GameObject:
   - component: {fileID: 949835831}
   - component: {fileID: 949835830}
   m_Layer: 0
-  m_Name: VillagerSpawner()
+  m_Name: VillagerSpawner(4)
   m_TagString: VillagerSpawns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9475,6 +9475,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 74862592}
+  exits: []
+  PatrolTimerMin: 0
 --- !u!23 &1052610833
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9535,7 +9537,7 @@ Transform:
   m_Children:
   - {fileID: 940542359}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 89.989006, z: 0}
 --- !u!1001 &1053303114
 PrefabInstance:
@@ -9582,7 +9584,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2e0d19c99eeb8464896a7129a09062a8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2e0d19c99eeb8464896a7129a09062a8,
         type: 3}
@@ -9668,7 +9670,7 @@ Transform:
   - {fileID: 90875919}
   - {fileID: 2095402987}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1060151044
 GameObject:
@@ -10057,7 +10059,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1080490420
 PrefabInstance:
@@ -10261,7 +10263,8 @@ MonoBehaviour:
   - {fileID: 583519438}
   - {fileID: 1461496580}
   Prefab: {fileID: 9157237631544627948, guid: 373dcb7f62bc3934ca9a589ec40f9db7, type: 3}
-  spawnTimerMinutes: 2
+  PatrolTime: 0.2
+  spawnTimerMinutes: 0.2
 --- !u!4 &1088618883
 Transform:
   m_ObjectHideFlags: 0
@@ -10280,7 +10283,7 @@ Transform:
   - {fileID: 583519439}
   - {fileID: 1461496581}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1103453592
 GameObject:
@@ -10577,7 +10580,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1154061535
 GameObject:
@@ -12549,7 +12552,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a43bb3b61ab139e46a47a42dee90a161,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a43bb3b61ab139e46a47a42dee90a161,
         type: 3}
@@ -12608,7 +12611,7 @@ Transform:
   - {fileID: 7435388}
   - {fileID: 2032074758}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300124555
 GameObject:
@@ -12666,7 +12669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1304300142
 GameObject:
@@ -13029,7 +13032,7 @@ RectTransform:
   - {fileID: 1374546762}
   - {fileID: 1972482367}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13338,7 +13341,7 @@ Transform:
   - {fileID: 1829978823}
   - {fileID: 973359820}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1416981336
 GameObject:
@@ -13566,7 +13569,7 @@ GameObject:
   - component: {fileID: 1461496583}
   - component: {fileID: 1461496582}
   m_Layer: 0
-  m_Name: VillagerSpawner()
+  m_Name: VillagerSpawner(6)
   m_TagString: VillagerSpawns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14049,7 +14052,7 @@ GameObject:
   - component: {fileID: 1527198485}
   - component: {fileID: 1527198484}
   m_Layer: 0
-  m_Name: VillagerSpawner()
+  m_Name: VillagerSpawner(2)
   m_TagString: VillagerSpawns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14399,7 +14402,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f091c7e67192749408e9abbb61a87c31,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f091c7e67192749408e9abbb61a87c31,
         type: 3}
@@ -14809,7 +14812,7 @@ GameObject:
   - component: {fileID: 1594091346}
   - component: {fileID: 1594091345}
   m_Layer: 0
-  m_Name: VillagerSpawner()
+  m_Name: VillagerSpawner(3)
   m_TagString: VillagerSpawns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15258,7 +15261,7 @@ Transform:
   - {fileID: 124083288}
   - {fileID: 239454978}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 66.864006, z: 0}
 --- !u!1 &1696611235
 GameObject:
@@ -15789,7 +15792,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e97b5aec850d6c64382f7977c8b365f0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e97b5aec850d6c64382f7977c8b365f0,
         type: 3}
@@ -16258,7 +16261,7 @@ Transform:
   m_LocalScale: {x: 0.96805, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759494273
 GameObject:
@@ -17128,7 +17131,7 @@ Transform:
   - {fileID: 1795184136}
   - {fileID: 516608708}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1829978823 stripped
 Transform:
@@ -17136,80 +17139,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6951329641584962964}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1868013605
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3529321809806803058, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: ChurchWaypoint
-      value: 
-      objectReference: {fileID: 239454978}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 65.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 70.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627946, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9157237631544627948, guid: 373dcb7f62bc3934ca9a589ec40f9db7,
-        type: 3}
-      propertyPath: m_Name
-      value: Villager (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 373dcb7f62bc3934ca9a589ec40f9db7, type: 3}
 --- !u!1 &1870530143
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class Villager : MonoBehaviour
     public List<Transform> patrolPoints;
     private int curIndex;
     public GameObject[] exits;
+    private GameObject exit;
     private bool exiting;
     private bool running;
     public float PatrolTimerMin;
@@ -43,7 +44,7 @@ public class Villager : MonoBehaviour
     {
         PatrolTimerMin -= Time.deltaTime;
 
-        if (agent.remainingDistance < 10.0f && spottedPlayer == false)
+        if (agent.remainingDistance < 3f && spottedPlayer == false && exiting == false)
         {
             int curIndex = Random.Range(0, patrolPoints.Count);
             try
@@ -68,15 +69,29 @@ public class Villager : MonoBehaviour
             
         }
 
-        if (PatrolTimerMin > 0f)
+        if (PatrolTimerMin < 0f)
         {
             if (exiting == false)
             {
-                GameObject exit = exits[Random.Range(0, exits.Length)];
-                agent.SetDestination(exit.transform.position);
+                exit = exits[Random.Range(0, exits.Length)];
                 exiting = true;
             }
+            else
+            {
+                float Dist = Vector3.Distance(exit.transform.position, transform.position);
+
+                agent.SetDestination(exit.transform.position);
+
+                if (Dist < 2)
+                {
+                    Destroy(transform.gameObject);
+                }
+            }
+            
+            
 
         }
+
+
     }
 }
