@@ -9,15 +9,19 @@ public class Priest : MonoBehaviour
     public float cooldown = -1;
     public bool spottedPlayer = false;
     private int curIndex;
-    public GameObject[] patrolPoints;
-    public GameObject Player;
+    public List<Transform> patrolPoints;
+    private GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        patrolPoints = GameObject.FindGameObjectsWithTag("Waypoint");
-        int curIndex = Random.Range(0, patrolPoints.Length);
+        GameObject[] patrolobj = GameObject.FindGameObjectsWithTag("Crop");
+        foreach (GameObject i in patrolobj)
+        {
+            patrolPoints.Add(i.transform);
+        }
+        int curIndex = Random.Range(0, patrolPoints.Count);
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(patrolPoints[curIndex].transform.position); 
     }
@@ -27,11 +31,11 @@ public class Priest : MonoBehaviour
     {
         if (agent.remainingDistance < 10.0f && !spottedPlayer)
         {
-            int curIndex = Random.Range(0, patrolPoints.Length);
+            int curIndex = Random.Range(0, patrolPoints.Count);
             agent.SetDestination(patrolPoints[curIndex].transform.position);
         }
 
-       if (spottedPlayer = true)
+       if (spottedPlayer == true)
         {
 
            if (agent.remainingDistance > 3.0f)

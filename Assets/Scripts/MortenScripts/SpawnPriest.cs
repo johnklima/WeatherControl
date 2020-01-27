@@ -19,7 +19,7 @@ public class SpawnPriest : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-       if(other.gameObject.tag == "Player")
+       if(other.gameObject.tag == "NPC")
         {
             if(spawnDelay <= 0f)
             {
