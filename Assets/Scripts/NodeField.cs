@@ -30,7 +30,7 @@ public class NodeField : MonoBehaviour
 
     public GameObject plotPrefab;
 
-    void Start()
+    void Awake()
     {
         AudioS = GetComponent<AudioSource>();
         RayLength = BuildManager.instance.InterLength();
@@ -53,8 +53,11 @@ public class NodeField : MonoBehaviour
             
             cropType = Instantiate(plotPrefab, transform.position + positionOffset, transform.rotation);
 
-            cropType.GetComponent<FarmFieldScript>().currentCrop = currentCrop;
-            
+            cropType.GetComponent<FarmFieldScript>().fieldData.currentCrop = currentCrop;
+            cropType.GetComponent<FarmFieldScript>().fieldData.plotIndex = slv.index;
+
+
+
             emptyPlot = false;
             rendComp.enabled = false;
         }
@@ -136,12 +139,15 @@ public class NodeField : MonoBehaviour
                 if (BuildManager.instance.seeds[currentCrop].quantity > 0)
                 {
 
-                    cropType.GetComponent<FarmFieldScript>().currentCrop = currentCrop;
+                    cropType.GetComponent<FarmFieldScript>().fieldData.currentCrop = currentCrop;
 
                     BuildManager.instance.seeds[currentCrop].plantSeed();
 
                     GetComponentInParent<SaveLoadField>().isPlanted = true;
                     GetComponentInParent<SaveLoadField>().currentCrop = currentCrop;
+
+                    Debug.Log("SaveLoadField write");
+                    
                     GetComponentInParent<SaveLoadField>().writeData();
 
                     plantedPlot = true;

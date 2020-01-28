@@ -11,6 +11,11 @@ public class SaveLoadField : MonoBehaviour
     public bool isPlanted = false;
     public int currentCrop = -1;
     public int index;
+
+    public bool stage1bool;
+    public bool stage2bool;
+    public bool stage3bool;
+
     private void Awake()
     {
         try

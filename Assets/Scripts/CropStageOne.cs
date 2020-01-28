@@ -23,7 +23,7 @@ public class CropStageOne : MonoBehaviour
             }
         }
         
-        seedplanted = GetComponentInParent<FarmFieldScript>().currentCrop;
+        seedplanted = GetComponentInParent<FarmFieldScript>().fieldData.currentCrop;
 
         foreach (GameObject Stick in Sticks)
         {
