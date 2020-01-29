@@ -64,7 +64,19 @@ public class NodeField : MonoBehaviour
 
 
     }
+    private void Start()
+    {
+        SaveLoadField slv = GetComponent<SaveLoadField>();
+        if (slv.isPlanted) 
+        {
+            cropType.GetComponent<FarmFieldScript>().fieldData.currentCrop = currentCrop;
+            cropType.GetComponent<FarmFieldScript>().fieldData.plotIndex = slv.index;
+            Debug.Log("f " + transform.name + " " + cropType.GetComponent<FarmFieldScript>().fieldData.plotIndex);
+        }
 
+
+
+    }
     private void Update()
     {
 
@@ -111,8 +123,14 @@ public class NodeField : MonoBehaviour
                     //Give "parent" Reference
                     cropType.GetComponent<FarmFieldScript>().TheCropField = transform.gameObject;
 
+
+                    //assign the index
+                    SaveLoadField slv = GetComponentInParent<SaveLoadField>();
+                    cropType.GetComponent<FarmFieldScript>().fieldData.plotIndex = slv.index;
+                  
+                    
                     //Take Money
-                    emptyPlot = false;
+                   emptyPlot = false;
                     Debug.LogError("need to draw money here");
                     AudioS.clip = Placefield;
                     AudioS.Play();

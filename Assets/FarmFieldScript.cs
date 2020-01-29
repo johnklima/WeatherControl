@@ -194,6 +194,6 @@ public class FarmFieldScript : MonoBehaviour
 
 
         string json = JsonUtility.ToJson(fieldData);
-        System.IO.File.WriteAllText("SeedData/FieldPlanted" + fieldData.plotIndex+ ".txt", json);
+        System.IO.File.WriteAllText("SeedData/FieldPlanted" + fieldData.plotIndex + ".txt", json);
     }
 }
