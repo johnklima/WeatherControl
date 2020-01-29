@@ -6,7 +6,6 @@ public class PlaySound : MonoBehaviour
 {
 
     public AudioClip AmbientSound;
-    public float Volume;
     public AudioSource audio;
     public float startCount = 15f;
     public float currentCount = 15f;
@@ -18,7 +17,7 @@ public class PlaySound : MonoBehaviour
 
         if(currentCount <= 0)
         {
-            audio.PlayOneShot(AmbientSound, Volume);
+            audio.PlayOneShot(AmbientSound);
             currentCount = startCount;
         }
     }

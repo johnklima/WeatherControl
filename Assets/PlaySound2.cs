@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlaySound2 : MonoBehaviour
 {
     public AudioClip AmbientSound;
-    public float Volume;
     public AudioSource audio;
     public float startCount = 10f;
     public float currentCount = 10f;
@@ -17,7 +16,7 @@ public class PlaySound2 : MonoBehaviour
 
         if (currentCount <= 0)
         {
-            audio.PlayOneShot(AmbientSound, Volume);
+            audio.PlayOneShot(AmbientSound);
             currentCount = startCount;
         }
     }
