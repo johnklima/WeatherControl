@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class WeatherOverField : MonoBehaviour
 {
-    public GameObject Sun;
-    public GameObject Rain;
-    public GameObject Lightning;
-    public GameObject Snow;
 
-    private List<GameObject> WeatherTypes;
+    public GameObject[] WeatherParticleFX;
+    
 
     private GameObject CurrentWeather;
 
-    
+
 
     // Start is called before the first frame update
     void awake()
-    {
-        WeatherTypes.Add(Sun);
-        WeatherTypes.Add(Rain);
-        WeatherTypes.Add(Lightning);
-        WeatherTypes.Add(Snow);
+    { 
+
     }
 
     // Update is called once per frame
@@ -30,16 +24,11 @@ public class WeatherOverField : MonoBehaviour
         
     }
 
-    public void SpawnWeather(string Weathertype)
+    public void SpawnWeather(GameObject Weathertype)
     {
-        foreach (GameObject Weather in WeatherTypes)
-        {
-            if (Weather.name == Weathertype)
-            {
-                Destroy(CurrentWeather);
-                CurrentWeather = Instantiate(Weather, transform);
-            }
-        }
+        int listNR = Weathertype.GetComponent<WeatherInfo>().ArrayIndex;
+        GameObject weatherSpawn = Instantiate(WeatherParticleFX[listNR], transform);
+        CurrentWeather = weatherSpawn;
     }
 
 }

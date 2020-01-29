@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7819564846645751113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.81, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6759359819385119545}
@@ -1297,6 +1297,11 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4087898692535013312, guid: 45e4e363fcb2df747bb68b235b259a87,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4087898692535013314, guid: 45e4e363fcb2df747bb68b235b259a87,
         type: 3}
       propertyPath: m_Name
@@ -1315,7 +1320,7 @@ PrefabInstance:
     - target: {fileID: 4087898692535013327, guid: 45e4e363fcb2df747bb68b235b259a87,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4087898692535013327, guid: 45e4e363fcb2df747bb68b235b259a87,
         type: 3}

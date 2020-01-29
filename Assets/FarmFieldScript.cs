@@ -34,7 +34,7 @@ public class FarmFieldScript : MonoBehaviour
     }
 
     //Weather Over Field
-    public String CurrentWeather;
+    public GameObject CurrentWeather;
 
 
     public FarmFieldData fieldData;   
@@ -202,7 +202,7 @@ public class FarmFieldScript : MonoBehaviour
     }
 
     // Getting Weather Information
-    public void Weather(string WeatherType)
+    public void Weather(GameObject WeatherType)
     {
         CurrentWeather = WeatherType;
         GetComponentInChildren<WeatherOverField>().SpawnWeather(WeatherType);

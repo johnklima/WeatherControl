@@ -4,67 +4,77 @@ using UnityEngine;
 
 public class WeatherPlatform : MonoBehaviour
 {
-    public GameObject Sun;
-    public GameObject Rain;
-    public GameObject Lightning;
-    public GameObject Snow;
 
-    private BoxCollider thisCollider;
+    private GameObject theParent;
 
-    private List<GameObject> WeatherEffects;
+    public GameObject[] WeatherEffects;
 
     private GameObject SelectedWeather;
     public int Index;
 
-    // Start is called before the first frame update
-    void awake()
-    {
-        thisCollider = GetComponent<BoxCollider>();
+    public bool playerHere;
+    private bool spawnedWeather;
 
-        WeatherEffects.Add(Sun);
-        WeatherEffects.Add(Rain);
-        WeatherEffects.Add(Lightning);
-        WeatherEffects.Add(Snow);
-    }
+
+
+    // Start is called before the first frame update
+
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnMouseOver()
-    {
-
-        Debug.Log("Mouse is Over");
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (playerHere == true)
         {
-            Debug.Log("Pressed Q");
-            Index += 1;
-            if (Index == -1)
+            Debug.Log(" I am Awakened!");
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                Index = 4;
+                Index += 1;
+                if (Index == 4)
+                {
+                    Index = 0;
+                }
+                Destroy(SelectedWeather);
+                GameObject SpawnedWeather = Instantiate(WeatherEffects[Index], transform);
+                SelectedWeather = SpawnedWeather;
             }
-            Destroy(SelectedWeather.gameObject);
-            SelectedWeather = Instantiate(WeatherEffects[Index], transform);
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Pressed E");
-            Index -= 1;
-            if (Index == 5)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                Index = 1;
+                Index -= 1;
+                if (Index == -1)
+                {
+                    Index = 3;
+                }
+                Destroy(SelectedWeather);
+                GameObject SpawnedWeather = Instantiate(WeatherEffects[Index], transform);
+                SelectedWeather = SpawnedWeather;
             }
-            Destroy(SelectedWeather.gameObject);
-            SelectedWeather = Instantiate(WeatherEffects[Index], transform);
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                SendWeather();
+            }
         }
     }
 
-    private void OnMouseDown()
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Pressed Mousebutton");
-        GetComponentInParent<FarmFieldScript>().Weather(SelectedWeather.name);
+        if (other.tag == "Player")
+        {
+            Debug.Log("player is here");
+            playerHere = true;
+            GameObject SpawnedWeather = Instantiate(WeatherEffects[Index],transform);
+            SelectedWeather = SpawnedWeather;
+        }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        Destroy(SelectedWeather);
+        playerHere = false;
+    }
+
+    private void SendWeather()
+    {
+        spawnedWeather = true;
+        GetComponentInParent<FarmFieldScript>().Weather(SelectedWeather);
+    }
 }

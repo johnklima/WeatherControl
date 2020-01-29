@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 926900029254648315}
   - component: {fileID: 926900029254648292}
   - component: {fileID: 926900029254648293}
-  - component: {fileID: 926900029254648294}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -80,20 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &926900029254648294
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926900029254648295}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &6941773136824735241
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4906836652877612057}
   - component: {fileID: 6929741265300216101}
+  - component: {fileID: 3595891324182667197}
   m_Layer: 0
   m_Name: WeatherPlatform
   m_TagString: Untagged
@@ -138,8 +124,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a9929823df54441af7222d18e031e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sun: {fileID: 0}
-  Rain: {fileID: 0}
-  Lightning: {fileID: 0}
-  Snow: {fileID: 0}
+  WeatherEffects:
+  - {fileID: 1013261122494250573, guid: f9c35dc5b9a538444819f604a78b1949, type: 3}
+  - {fileID: 1517944489787966246, guid: be18cafb4cbdfb042a3f28c6cd5910ce, type: 3}
+  - {fileID: 6227699484612971908, guid: c8aff2b6e8e881448b8200d9702f711e, type: 3}
+  - {fileID: 7148946720219053500, guid: f3cef941be675454a83ed4a39188e01a, type: 3}
   Index: 0
+  playerHere: 0
+--- !u!65 &3595891324182667197
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6941773136824735241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5944586, y: 3.2322927, z: 3.1860127}
+  m_Center: {x: 0.06665182, y: 1.6947701, z: 0.057043552}
