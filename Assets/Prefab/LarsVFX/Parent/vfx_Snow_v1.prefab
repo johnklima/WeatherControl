@@ -46,7 +46,7 @@ PrefabInstance:
     - target: {fileID: 8905059224805023425, guid: 5d984745b53839d4cbf805280a0ca52e,
         type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8905059224805023425, guid: 5d984745b53839d4cbf805280a0ca52e,
         type: 3}
@@ -92,6 +92,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905059224805023425, guid: 5d984745b53839d4cbf805280a0ca52e,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8905059224805023427, guid: 5d984745b53839d4cbf805280a0ca52e,
         type: 3}
@@ -170,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 5955134402696633937, guid: 6aaf11076c4f90544b7b678d181c7a2d,
         type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5955134402696633937, guid: 6aaf11076c4f90544b7b678d181c7a2d,
         type: 3}
@@ -256,6 +261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: VelocityModule.y.minScalar
       value: -2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955134402696633937, guid: 6aaf11076c4f90544b7b678d181c7a2d,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5955134402696633938, guid: 6aaf11076c4f90544b7b678d181c7a2d,
         type: 3}
@@ -436,11 +446,6 @@ PrefabInstance:
       propertyPath: VelocityModule.z.minScalar
       value: -0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 7787908059112917481, guid: 36f36928d0bb0864c86615b9b132bdcd,
-        type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7787908059112917482, guid: 36f36928d0bb0864c86615b9b132bdcd,
         type: 3}
       propertyPath: m_Name
@@ -464,17 +469,17 @@ PrefabInstance:
     - target: {fileID: 7787908059112917483, guid: 36f36928d0bb0864c86615b9b132bdcd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7787908059112917483, guid: 36f36928d0bb0864c86615b9b132bdcd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7787908059112917483, guid: 36f36928d0bb0864c86615b9b132bdcd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7787908059112917483, guid: 36f36928d0bb0864c86615b9b132bdcd,
         type: 3}
