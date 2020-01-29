@@ -33,6 +33,10 @@ public class FarmFieldScript : MonoBehaviour
 
     }
 
+    //Weather Over Field
+    public String CurrentWeather;
+
+
     public FarmFieldData fieldData;   
 
     public GameObject TheCropField;
@@ -196,4 +200,13 @@ public class FarmFieldScript : MonoBehaviour
         string json = JsonUtility.ToJson(fieldData);
         System.IO.File.WriteAllText("SeedData/FieldPlanted" + fieldData.plotIndex + ".txt", json);
     }
+
+    // Getting Weather Information
+    public void Weather(string WeatherType)
+    {
+        CurrentWeather = WeatherType;
+        GetComponentInChildren<WeatherOverField>().SpawnWeather(WeatherType);
+
+    }
+
 }
