@@ -11,10 +11,8 @@ GameObject:
   - component: {fileID: 9116872104907832594}
   - component: {fileID: 9116872104907832605}
   - component: {fileID: 9116872104907832604}
-  - component: {fileID: 9116872104907832595}
   - component: {fileID: 9116872104907832607}
   - component: {fileID: 9116872104907832606}
-  - component: {fileID: 9116872104907832592}
   m_Layer: 2
   m_Name: Priest
   m_TagString: Priest
@@ -84,21 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9116872104907832595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9116872104907832601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d4037cdd1fa804dabfb08862ffdf63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: -1
-  spottedPlayer: 0
-  patrolPoints: []
 --- !u!136 &9116872104907832607
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -135,22 +118,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &9116872104907832592
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9116872104907832601}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &9116872105068251396
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +129,6 @@ GameObject:
   - component: {fileID: 9116872105068251397}
   - component: {fileID: 9116872105068251417}
   - component: {fileID: 9116872105068251416}
-  - component: {fileID: 9116872105068251418}
   - component: {fileID: 9116872105068251419}
   m_Layer: 2
   m_Name: Visibility
@@ -232,19 +198,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9116872105068251418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9116872105068251396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b53a378b279ad634aa91a97d199920c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  didhit: 0
 --- !u!64 &9116872105068251419
 MeshCollider:
   m_ObjectHideFlags: 0

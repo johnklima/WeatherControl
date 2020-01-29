@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnVillager : MonoBehaviour
 {
-
+    /* <JPK> disable all
     public GameObject[] Spawnpoints;
     public GameObject Prefab;
 
@@ -35,4 +35,5 @@ public class SpawnVillager : MonoBehaviour
         }
 
     }
+    */
 }

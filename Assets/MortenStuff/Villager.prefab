@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 9157237631544627946}
   - component: {fileID: 9157237631544627947}
   - component: {fileID: 9157237631544627944}
-  - component: {fileID: 3529321809806803058}
   - component: {fileID: 9157237631544627945}
   - component: {fileID: 9157237631544627950}
-  - component: {fileID: 9157237631544627861}
+  - component: {fileID: 2754700162510163358}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Villager
@@ -84,21 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3529321809806803058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9157237631544627948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ae23c793356cf840ae775ed17c56786, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChurchWaypoint: {fileID: 0}
-  spottedPlayer: 0
-  patrolPoints: []
 --- !u!136 &9157237631544627945
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -135,22 +119,18 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &9157237631544627861
-Rigidbody:
+--- !u!114 &2754700162510163358
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9157237631544627948}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caca10f1762f757428a50515f9c8dcd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9157237632207992824
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +143,7 @@ GameObject:
   - component: {fileID: 9157237632207992807}
   - component: {fileID: 9157237632207992804}
   - component: {fileID: 9157237632207992805}
-  - component: {fileID: 2701401375392381010}
+  - component: {fileID: 1017340917698848709}
   m_Layer: 0
   m_Name: Vision
   m_TagString: Untagged
@@ -246,7 +226,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8208b30f0bb58af4a9596180f91514dd, type: 2}
---- !u!114 &2701401375392381010
+--- !u!114 &1017340917698848709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,7 +235,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9157237632207992824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b53a378b279ad634aa91a97d199920c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 1391136638ea3be4aafe0d117f955baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  didhit: 0

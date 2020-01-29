@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Priest : MonoBehaviour
 {
+    /*
     NavMeshAgent agent;
     public float cooldown = -1;
     public bool spottedPlayer = false;
@@ -57,4 +58,5 @@ public class Priest : MonoBehaviour
             }
         }
     }
+    */
 }

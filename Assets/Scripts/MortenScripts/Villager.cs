@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class Villager : MonoBehaviour
 {
+
+    /* <JPK> disable all
     NavMeshAgent agent;
     private GameObject player;
     public GameObject ChurchWaypoint;
@@ -94,4 +96,5 @@ public class Villager : MonoBehaviour
 
 
     }
+    */
 }

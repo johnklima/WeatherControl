@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class SpawnPriest : MonoBehaviour
 {
+/* <JPK>disable all
+
     public GameObject Prefab;
 
 
@@ -15,4 +19,5 @@ public class SpawnPriest : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+    */
 }

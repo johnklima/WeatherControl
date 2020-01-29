@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpottedPlayerTwo : MonoBehaviour
 {
-
+    /*
     public Villager npcAIscript = null;
 
     // Start is called before the first frame update
@@ -60,4 +60,5 @@ public class SpottedPlayerTwo : MonoBehaviour
 
         }
     }
+    */
 }
