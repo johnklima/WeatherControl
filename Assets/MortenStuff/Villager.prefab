@@ -131,6 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caca10f1762f757428a50515f9c8dcd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notified: 0
+  HomeTime: 60
+  PatrolTime: 60
+  counter: 0
 --- !u!1 &9157237632207992824
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +184,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9157237632207992824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -238,3 +242,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1391136638ea3be4aafe0d117f955baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spotedPlayer: 0
