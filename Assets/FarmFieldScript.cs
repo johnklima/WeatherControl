@@ -56,6 +56,11 @@ public class FarmFieldScript : MonoBehaviour
 
     bool bootme = true;
 
+    public float cropHealth = 30;
+    public bool isTaken = false;
+    public bool windUsed = false;
+    public bool cropDepleted;
+
     private void Start()
     {
 
@@ -184,6 +189,15 @@ public class FarmFieldScript : MonoBehaviour
             }
         }
 
+
+        if (cropHealth > 0)
+        {
+            cropDepleted = false;
+        }
+        else
+        {
+            cropDepleted = true;
+        }
     }
 
     public void Planted(bool PlantedCrop)
@@ -208,5 +222,4 @@ public class FarmFieldScript : MonoBehaviour
         GetComponentInChildren<WeatherOverField>().SpawnWeather(WeatherType);
 
     }
-
 }

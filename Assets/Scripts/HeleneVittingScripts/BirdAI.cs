@@ -14,12 +14,12 @@ public class BirdAI : MonoBehaviour
     private bool foundTarget = false;
 
     private GameObject[] cropTargets;
-    private GameObject[] crops;
+    private GameObject cropTarget;
     private GameObject crop;
 
-    private int target;
+    public int target;
 
-    Crop cropScript;
+    FarmFieldScript cropScript;
 
     private void Start()
     {
@@ -35,12 +35,8 @@ public class BirdAI : MonoBehaviour
             cropTargets = GameObject.FindGameObjectsWithTag("CropTarget");
             //Chooses a random target from the array
             target = Random.Range(0, cropTargets.Length);
-
-            //Return an array of all crops
-            crops = GameObject.FindGameObjectsWithTag("Crop");
-            //Chooses the crop the birds has targeted
-            crop = crops[target];
-            cropScript = crop.GetComponent<Crop>();
+            cropTarget = cropTargets[target];
+            cropScript = cropTarget.GetComponent<FarmFieldScript>();
 
             if (cropScript.isTaken == true || cropScript.cropDepleted == true)
             {
@@ -72,7 +68,7 @@ public class BirdAI : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, spawnPoint.transform.position, speed * Time.deltaTime);
 
-            if (Vector3.Distance (transform.position, spawnPoint.transform.position) <= 5)
+            if (transform.position == spawnPoint.transform.position)
             {
                 cropScript.isTaken = false;
                 Destroy(gameObject);

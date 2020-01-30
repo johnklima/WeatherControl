@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 4391789812990307457}
   m_Layer: 0
   m_Name: FarmField
-  m_TagString: Untagged
+  m_TagString: CropTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -857,6 +857,10 @@ MonoBehaviour:
   Counter2: {fileID: 7401842744667487755}
   stageOnePrefab: {fileID: 3390786060795831316, guid: 531b2932377feec4a835ad89471135d3,
     type: 3}
+  cropHealth: 30
+  isTaken: 0
+  windUsed: 0
+  cropDepleted: 0
 --- !u!1 &8812141150050179469
 GameObject:
   m_ObjectHideFlags: 0
