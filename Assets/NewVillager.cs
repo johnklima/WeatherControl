@@ -23,15 +23,20 @@ public class NewVillager : MonoBehaviour
     public float HomeTime;
     public float PatrolTime;
     public float counter;
+
+    private float agentSpeedRef;
     // Start is called before the first frame update
     void Start()
     {
+        
+
         //Starts on true for testing purposes !!Change Later!!
         onPatrol = true;
 
         Home = transform.position;
 
         agent = GetComponent<NavMeshAgent>();
+        agentSpeedRef = agent.speed;
         thePriest = GameObject.FindGameObjectWithTag("Priest");
         farmCrops = GameObject.FindGameObjectsWithTag("Crop");
         foundPlayer = false;
@@ -50,7 +55,6 @@ public class NewVillager : MonoBehaviour
         counter -= Time.deltaTime;
         if (counter < 0 && notified == false)
         {
-            PitchFork.SetActive(false);
             if (onPatrol == true)
             {
                 counter = PatrolTime;
@@ -61,7 +65,6 @@ public class NewVillager : MonoBehaviour
                 counter = HomeTime;
                 onPatrol = true;
             }
-            
         }
         //Patrol
 
@@ -71,7 +74,6 @@ public class NewVillager : MonoBehaviour
             {
                 if (foundPlayer == false)
                 {
-                    PitchFork.SetActive(false);
                     GetNewDest();
                 }
             }
@@ -128,7 +130,8 @@ public class NewVillager : MonoBehaviour
         thePriest.GetComponent<NewPriest>().PlayerPos = playerPos;
         if(foundPlayer == false)
         {
-            agent.speed *= 2;
+            onPatrol = true;
+            agent.speed = agentSpeedRef * 2;
         }
         foundPlayer = true;
         GetNewDest();
@@ -136,8 +139,17 @@ public class NewVillager : MonoBehaviour
 
     public void SlowDown()
     {
-        agent.speed /= 2f;
+        agent.speed = agentSpeedRef;
     }
 
-    
+    public void BurnTheWitch()
+    {
+        thePriest.GetComponent<NewPriest>().VillagerSpottedPlayer();
+    }
+
+    public void atEase()
+    {
+        PitchFork.SetActive(false);
+        notified = false;
+    }
 }

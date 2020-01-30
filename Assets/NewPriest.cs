@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class NewPriest : MonoBehaviour
 {
     private NavMeshAgent agent;
-    public bool chasePlayer = false;
+
     public Vector3 PlayerPos;
 
     private GameObject TheVillager;
@@ -17,6 +17,7 @@ public class NewPriest : MonoBehaviour
     private Vector3 Home;
     private Transform Dest;
 
+    public bool chasePlayer = false;
     private bool Praying;
     private bool Running;
     private bool setCounter;
@@ -25,9 +26,13 @@ public class NewPriest : MonoBehaviour
     public float PatrolTime;
     private float counter;
 
+    private float agentSpeedRef;
+
     // Start is called before the first frame update
     void Start()
     {
+
+
         Running = false;
         Praying = true;
 
@@ -35,6 +40,7 @@ public class NewPriest : MonoBehaviour
         TheVillager = GameObject.FindGameObjectWithTag("Villager");
         farmCrops = GameObject.FindGameObjectsWithTag("Crop");
         agent = GetComponent<NavMeshAgent>();
+        agentSpeedRef = agent.speed;
         Home = transform.position;
 
     }
@@ -44,6 +50,10 @@ public class NewPriest : MonoBehaviour
     {
         if (Praying == true)
         {
+            if (setCounter == true)
+            {
+                setCounter = false;
+            }
             agent.SetDestination(Home);
             agent.stoppingDistance = 1f;
         }
@@ -51,17 +61,12 @@ public class NewPriest : MonoBehaviour
         {
             if (chasePlayer == true)
             {
-                if (setCounter == false)
+                if (Running == false)
                 {
-                    agent.speed *= 1.5f;
-                    counter = ChaseTime;
-                    setCounter = true;
+                    agent.speed = agentSpeedRef * 1.5f;
+                    Running = true;
                 }
-                counter -= Time.deltaTime;
-                if (counter < 0f)
-                {
-                    chasePlayer = false;
-                }
+                //
                 agent.SetDestination(thePlayer.transform.position);
                 return;
             }
@@ -70,19 +75,17 @@ public class NewPriest : MonoBehaviour
                 if (foundPlayer == false)
                 {
                     GetNewDest();
-                    if (Running == true)
-                    {
-                        counter = PatrolTime;
-                        agent.speed /= 2f;
-                        TheVillager.GetComponent<NewVillager>().SlowDown();
-                        Running = false;
-                    }
                 }
-                else if (Vector3.Distance(transform.position, PlayerPos) < 1f)
+                if (Running == true && agent.remainingDistance < 1f)
                 {
-                    foundPlayer = GetComponentInChildren<ConeOfVisibility>().spotedPlayer;
+                    counter = PatrolTime;
+                    agent.speed = agentSpeedRef;
+                    TheVillager.GetComponent<NewVillager>().SlowDown();
+                    Running = false;
+                    foundPlayer = false;
                 }
             }
+
 
             if (foundPlayer == false && Running == false && chasePlayer == false)
             {
@@ -91,22 +94,12 @@ public class NewPriest : MonoBehaviour
                 if (counter < 0)
                 {
                     Praying = true;
-                    TheVillager.GetComponent<NewVillager>().notified = false;
+                    TheVillager.GetComponent<NewVillager>().atEase(); ;
+                    counter = PatrolTime;
                 }
 
             }
         }
-
-
-        /*if a villager enters his collision box, meaning the villager spotted the witch
-        set the navmeshagent destination to a patrol path.
-
-        when the visibility cone proves true, he sees the player, set the destination to the player
-
-        PERIODICALLLY check if the player is no longer inside the cone, resume patrol path
-
-        once player is back in cone, set destination to player
-       */
     }
 
     private void GetNewDest()
@@ -123,8 +116,13 @@ public class NewPriest : MonoBehaviour
     {
         Running = true;
         Praying = false;
-        agent.speed *= 2f;
+        agent.speed = agentSpeedRef * 2f;
         agent.SetDestination(PlayerPos);
         foundPlayer = true;
+    }
+
+    public void VillagerSpottedPlayer()
+    {
+        chasePlayer = true;
     }
 }
