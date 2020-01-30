@@ -36,6 +36,12 @@ public class ConeOfVisibility : MonoBehaviour
         else
         {
             spotedPlayer = false;
+            if (transform.parent.CompareTag("Priest"))
+            {
+                transform.parent.GetComponent<NewPriest>().chasePlayer = false;
+                transform.parent.GetComponent<NewPriest>().Running = false;
+            }
+
         }
     }
 
@@ -44,6 +50,7 @@ public class ConeOfVisibility : MonoBehaviour
         if (other.tag == "Player")
         {
             Player = other.transform.gameObject;
+            CheckForPlayer();
             PlayerInCone = true;
             playerPos = other.transform.position;
         }

@@ -6,19 +6,27 @@ public class PlaySound : MonoBehaviour
 {
 
     public AudioClip AmbientSound;
-    public AudioSource audio;
+    private AudioSource Audio;
     public float startCount = 15f;
-    public float currentCount = 15f;
+    private float currentCount;
 
+
+    private void Start()
+    {
+        currentCount = startCount;
+        Audio = GetComponent<AudioSource>();
+        Audio.clip = AmbientSound;
+    }
     // Update is called once per frame
     void Update()
     {
         currentCount -= Time.deltaTime;
 
-        if(currentCount <= 0)
+        if (currentCount <= 0)
         {
-            audio.PlayOneShot(AmbientSound);
+            Audio.Play();
             currentCount = startCount;
         }
     }
 }
+

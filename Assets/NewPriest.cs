@@ -19,8 +19,10 @@ public class NewPriest : MonoBehaviour
 
     public bool chasePlayer = false;
     private bool Praying;
-    private bool Running;
+    public bool Running;
     private bool setCounter;
+    private bool movedToPlayerPos;
+    private bool onPatrol;
 
     public float ChaseTime = 5f;
     public float PatrolTime;
@@ -42,7 +44,7 @@ public class NewPriest : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agentSpeedRef = agent.speed;
         Home = transform.position;
-
+        movedToPlayerPos = false;
     }
 
     // Update is called once per frame
@@ -53,16 +55,29 @@ public class NewPriest : MonoBehaviour
             if (setCounter == true)
             {
                 setCounter = false;
+                onPatrol = false;
             }
             agent.SetDestination(Home);
             agent.stoppingDistance = 1f;
         }
         else
         {
+
+            if (Vector3.Distance(transform.position,PlayerPos) < 1f)
+            {
+                foundPlayer = false;
+                movedToPlayerPos = true;
+            }
+            else if (movedToPlayerPos == false)
+            {
+                agent.SetDestination(PlayerPos);
+            }
+
             if (chasePlayer == true)
             {
                 if (Running == false)
                 {
+                    onPatrol = false;
                     agent.speed = agentSpeedRef * 1.5f;
                     Running = true;
                 }
@@ -89,11 +104,20 @@ public class NewPriest : MonoBehaviour
 
             if (foundPlayer == false && Running == false && chasePlayer == false)
             {
+                if (onPatrol == false)
+                {
+                    counter = PatrolTime;
+                    onPatrol = true;
+                    TheVillager.GetComponent<NewVillager>().SlowDown();
+                    agent.speed = agentSpeedRef;
+                    
+                }
                 counter -= Time.deltaTime;
                 
                 if (counter < 0)
                 {
                     Praying = true;
+                    onPatrol = false;
                     TheVillager.GetComponent<NewVillager>().atEase(); ;
                     counter = PatrolTime;
                 }

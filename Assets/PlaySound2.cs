@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PlaySound2 : MonoBehaviour
 {
-    public AudioClip AmbientSound;
-    public AudioSource audio;
-    public float startCount = 10f;
-    public float currentCount = 10f;
 
+    public AudioClip AmbientSound;
+    private AudioSource Audio;
+    public float startCount = 15f;
+    private float currentCount;
+
+
+    private void Start()
+    {
+        currentCount = startCount;
+        Audio = GetComponent<AudioSource>();
+        Audio.clip = AmbientSound;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -16,7 +24,7 @@ public class PlaySound2 : MonoBehaviour
 
         if (currentCount <= 0)
         {
-            audio.PlayOneShot(AmbientSound);
+            Audio.Play();
             currentCount = startCount;
         }
     }
