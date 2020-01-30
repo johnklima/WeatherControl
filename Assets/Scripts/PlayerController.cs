@@ -16,9 +16,12 @@ public class PlayerController : MonoBehaviour
     float currentSpeed;
 
     Transform cameraT;
+
+    Animator TheAnim;
     // Start is called before the first frame update
     void Start()
     {
+        TheAnim = GetComponent<Animator>();
         cameraT = Camera.main.transform;
     }
 
@@ -39,6 +42,47 @@ public class PlayerController : MonoBehaviour
         currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
 
         transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
-        
+
+        float correctorH = Input.GetAxis("Horizontal");
+        float correctorV = Input.GetAxis("Vertical");
+
+        if (correctorV < 0f)
+        {
+            correctorV *= -1;
+        }
+
+        if (correctorH < 0f)
+        {
+            correctorH *= -1;
+        }
+
+        float corrector = correctorH + correctorV;
+        corrector = Mathf.Clamp(corrector, 0f, 1f);
+
+        if (corrector < 0f)
+        {
+            corrector *= -1;
+        }
+
+        TheAnim.SetFloat("MoveSpeed", corrector);
+
+        if (TheAnim.GetFloat("MoveSpeed") == 0)
+        {
+            TheAnim.SetBool("isMoving", false);
+        }
+        else
+        {
+            TheAnim.SetBool("isMoving", true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            TheAnim.SetBool("Sprint", true);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            TheAnim.SetBool("Sprint", false);
+        }
+
     }
 }
