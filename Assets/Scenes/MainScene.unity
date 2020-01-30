@@ -1170,7 +1170,7 @@ PrefabInstance:
     - target: {fileID: 4729261513240242941, guid: ac868b26a84c22b46b2091644c84c686,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.49
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4729261513240242941, guid: ac868b26a84c22b46b2091644c84c686,
         type: 3}
@@ -10746,6 +10746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DayTime: 0.5
   NightTime: 0.5
+  nighttimeColor: {r: 0.695, g: 0.695, b: 1, a: 1}
 --- !u!1001 &976147714
 PrefabInstance:
   m_ObjectHideFlags: 0

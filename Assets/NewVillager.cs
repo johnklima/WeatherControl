@@ -7,6 +7,7 @@ public class NewVillager : MonoBehaviour
 {
     NavMeshAgent agent;
 
+    private GameObject PitchFork;
     private GameObject[] farmCrops;
     private GameObject thePriest;
 
@@ -37,6 +38,9 @@ public class NewVillager : MonoBehaviour
         GetNewDest();
 
         counter = PatrolTime;
+
+        PitchFork = GameObject.Find("PitchFork");
+        PitchFork.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,7 +50,7 @@ public class NewVillager : MonoBehaviour
         counter -= Time.deltaTime;
         if (counter < 0 && notified == false)
         {
-            
+            PitchFork.SetActive(false);
             if (onPatrol == true)
             {
                 counter = PatrolTime;
@@ -67,6 +71,7 @@ public class NewVillager : MonoBehaviour
             {
                 if (foundPlayer == false)
                 {
+                    PitchFork.SetActive(false);
                     GetNewDest();
                 }
             }
@@ -79,6 +84,7 @@ public class NewVillager : MonoBehaviour
             if (Vector3.Distance(transform.position, thePriest.transform.position) < 1f && notified == false)
             {
                 thePriest.GetComponent<NewPriest>().IsNotified();
+                PitchFork.SetActive(true);
                 notified = true;
                 foundPlayer = false;
             }

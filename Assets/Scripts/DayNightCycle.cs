@@ -16,14 +16,18 @@ public class DayNightCycle : MonoBehaviour
     private bool isDay;
 
     private Color DaytimeColor;
-    private Color nighttimeColor = Color.blue;
+    public Color nighttimeColor = Color.blue;
 
+    private GameObject[] Torches;
 
+    private bool lightSwitch;
     //by John Hauge
 
     // Start is called before the first frame update
     void Start()
     {
+        Torches = GameObject.FindGameObjectsWithTag("Tourch");
+
         theSun = transform.gameObject;
         theSunLight = theSun.GetComponent<Light>();
 
@@ -36,6 +40,8 @@ public class DayNightCycle : MonoBehaviour
         currentNightTime = NightTime;
 
         DaytimeColor = theSunLight.color;
+
+        lightSwitch = true;
     }
 
     // Update is called once per frame
@@ -43,6 +49,14 @@ public class DayNightCycle : MonoBehaviour
     {
         if (isDay == true)
         {
+            if (lightSwitch == true)
+            {
+                lightSwitch = false;
+                foreach(GameObject i in Torches)
+                {
+                    i.SetActive(false);
+                }
+            }
             theSunLight.color = DaytimeColor;
             currentDayTime -= Time.deltaTime;
             if(currentDayTime < 0f)
@@ -53,6 +67,14 @@ public class DayNightCycle : MonoBehaviour
         }
         else
         {
+            if (lightSwitch == false)
+            {
+                lightSwitch = true;
+                foreach (GameObject i in Torches)
+                {
+                    i.SetActive(true);
+                }
+            }
             theSunLight.color = nighttimeColor;
             currentNightTime -= Time.deltaTime;
             if (currentNightTime < 0f)

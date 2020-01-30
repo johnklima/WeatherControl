@@ -10,6 +10,7 @@ public class NewPriest : MonoBehaviour
     public Vector3 PlayerPos;
 
     private GameObject TheVillager;
+    private GameObject thePlayer;
     private GameObject[] farmCrops;
     private bool foundPlayer;
 
@@ -18,7 +19,9 @@ public class NewPriest : MonoBehaviour
 
     private bool Praying;
     private bool Running;
+    private bool setCounter;
 
+    public float ChaseTime = 5f;
     public float PatrolTime;
     private float counter;
 
@@ -28,6 +31,7 @@ public class NewPriest : MonoBehaviour
         Running = false;
         Praying = true;
 
+        thePlayer = GameObject.FindWithTag("Player");
         TheVillager = GameObject.FindGameObjectWithTag("Villager");
         farmCrops = GameObject.FindGameObjectsWithTag("Crop");
         agent = GetComponent<NavMeshAgent>();
@@ -45,19 +49,21 @@ public class NewPriest : MonoBehaviour
         }
         else
         {
-            if (foundPlayer == false && Running == false)
+            if (chasePlayer == true)
             {
-                counter -= Time.deltaTime;
-                
-                if (counter < 0)
+                if (setCounter == false)
                 {
-                    Praying = true;
-                    TheVillager.GetComponent<NewVillager>().notified = false;
+                    agent.speed *= 1.5f;
+                    counter = ChaseTime;
+                    setCounter = true;
                 }
-
-            }
-            {
-
+                counter -= Time.deltaTime;
+                if (counter < 0f)
+                {
+                    chasePlayer = false;
+                }
+                agent.SetDestination(thePlayer.transform.position);
+                return;
             }
             if (agent.remainingDistance < 3f)
             {
@@ -66,6 +72,7 @@ public class NewPriest : MonoBehaviour
                     GetNewDest();
                     if (Running == true)
                     {
+                        counter = PatrolTime;
                         agent.speed /= 2f;
                         TheVillager.GetComponent<NewVillager>().SlowDown();
                         Running = false;
@@ -75,6 +82,18 @@ public class NewPriest : MonoBehaviour
                 {
                     foundPlayer = GetComponentInChildren<ConeOfVisibility>().spotedPlayer;
                 }
+            }
+
+            if (foundPlayer == false && Running == false && chasePlayer == false)
+            {
+                counter -= Time.deltaTime;
+                
+                if (counter < 0)
+                {
+                    Praying = true;
+                    TheVillager.GetComponent<NewVillager>().notified = false;
+                }
+
             }
         }
 
@@ -102,7 +121,6 @@ public class NewPriest : MonoBehaviour
 
     public void IsNotified()
     {
-        counter = PatrolTime;
         Running = true;
         Praying = false;
         agent.speed *= 2f;

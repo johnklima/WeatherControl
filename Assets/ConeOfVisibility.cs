@@ -54,6 +54,11 @@ public class ConeOfVisibility : MonoBehaviour
                 else
                 {
 
+                    if (spotedPlayer == false)
+                    {
+                        transform.parent.GetComponent<NewPriest>().chasePlayer = true;
+                        spotedPlayer = true;
+                    }
                 }
                 
 
