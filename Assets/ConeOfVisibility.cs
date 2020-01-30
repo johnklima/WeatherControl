@@ -21,6 +21,8 @@ public class ConeOfVisibility : MonoBehaviour
             Vector3 direction =  other.transform.position - transform.position;
             float dist = direction.magnitude;
 
+            Debug.DrawRay(transform.position, direction, Color.red, 10f);
+
             // Bit shift the index of the layer (8) to get a bit mask for sight blockers
             int layerMask = 1 << 8;
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2632674026016636363}
   - component: {fileID: 2632674026016636361}
   - component: {fileID: 2632674026016636362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4841,7 +4841,7 @@ GameObject:
   - component: {fileID: 2632674026342933815}
   - component: {fileID: 2632674026342933813}
   - component: {fileID: 2632674026342933814}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9595,7 +9595,7 @@ GameObject:
   - component: {fileID: 2632674026670569828}
   - component: {fileID: 2632674026670569826}
   - component: {fileID: 2632674026670569827}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElectricBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14425,7 +14425,7 @@ GameObject:
   - component: {fileID: 2632674026749233908}
   - component: {fileID: 2632674026749233906}
   - component: {fileID: 2632674026749233907}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SunBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19261,7 +19261,7 @@ GameObject:
   - component: {fileID: 2632674027070918471}
   - component: {fileID: 2632674027070918469}
   - component: {fileID: 2632674027070918470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24073,7 +24073,7 @@ GameObject:
   - component: {fileID: 2632674027975903597}
   - component: {fileID: 2632674027975903595}
   - component: {fileID: 2632674027975903596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElectricBeam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28903,7 +28903,7 @@ GameObject:
   - component: {fileID: 2632674028098143377}
   - component: {fileID: 2632674028098143391}
   - component: {fileID: 2632674028098143376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

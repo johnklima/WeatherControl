@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 133985046}
   - component: {fileID: 133985048}
   - component: {fileID: 133985047}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4774,7 +4774,7 @@ GameObject:
   - component: {fileID: 1035493339}
   - component: {fileID: 1035493341}
   - component: {fileID: 1035493340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wavelengths
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9537,7 +9537,7 @@ GameObject:
   - component: {fileID: 6951329641018237486}
   - component: {fileID: 6951329641018237480}
   - component: {fileID: 6951329641018237487}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14430,7 +14430,7 @@ GameObject:
   - component: {fileID: 6951329641390841359}
   - component: {fileID: 6951329641390841353}
   - component: {fileID: 6951329641390841352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19260,7 +19260,7 @@ GameObject:
   - component: {fileID: 6951329641417106366}
   - component: {fileID: 6951329641417106360}
   - component: {fileID: 6951329641417106367}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElectricBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24090,7 +24090,7 @@ GameObject:
   - component: {fileID: 6951329641923867697}
   - component: {fileID: 6951329641923867699}
   - component: {fileID: 6951329641923867698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28981,7 +28981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6951329642305548115}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: vfx_SunRays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29015,7 +29015,7 @@ GameObject:
   - component: {fileID: 6951329642551400796}
   - component: {fileID: 6951329642551400798}
   - component: {fileID: 6951329642551400797}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DistortedEcplise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33853,7 +33853,7 @@ GameObject:
   - component: {fileID: 6951329642567082899}
   - component: {fileID: 6951329642567082909}
   - component: {fileID: 6951329642567082908}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElectricBeam (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38683,7 +38683,7 @@ GameObject:
   - component: {fileID: 6951329642778613108}
   - component: {fileID: 6951329642778613110}
   - component: {fileID: 6951329642778613109}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rays
   m_TagString: Untagged
   m_Icon: {fileID: 0}

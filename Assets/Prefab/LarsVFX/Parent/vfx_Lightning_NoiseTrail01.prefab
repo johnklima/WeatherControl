@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5933245176940598212}
   - component: {fileID: 5933245176940598213}
   - component: {fileID: 5933245176940598214}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: vfx_Lightning_NoiseTrail01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4766,7 +4766,7 @@ GameObject:
   - component: {fileID: 5933245178709290772}
   - component: {fileID: 5933245178709290774}
   - component: {fileID: 5933245178709290773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: vfx_Sparks01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
