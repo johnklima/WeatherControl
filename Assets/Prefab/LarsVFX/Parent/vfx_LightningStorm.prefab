@@ -150,6 +150,11 @@ PrefabInstance:
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5157034723615803777, guid: 0de19843ec9c7094cb64d2a5d9c5a0fb,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 567
+      objectReference: {fileID: 0}
     - target: {fileID: 5157034723615803790, guid: 0de19843ec9c7094cb64d2a5d9c5a0fb,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
